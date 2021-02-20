@@ -1,0 +1,32 @@
+.landing{
+
+    position: relative;
+
+    &__container{
+        height: 100vh;
+        color: white;
+        position: absolute;
+        top: 40%;
+
+        // border: 5px dotted white;
+
+    }
+    &__jumbotron{
+        height: 100vh;
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+        &-heading1{
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+        &-heading2{
+            font-size: 2rem;
+        }
+        &-donateButton{
+            @include absCenter;
+        }
+    }
+}

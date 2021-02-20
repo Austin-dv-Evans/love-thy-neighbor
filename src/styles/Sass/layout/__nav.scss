@@ -1,0 +1,18 @@
+.nav{
+    &__navbar{
+        width: 1000px;
+
+        &--brand{
+            padding: 1rem ;
+            border: 3px solid red;
+        }
+        &--links{
+            font-size: 1.5rem;
+            color:white;
+
+        }
+        &--each-link{
+            color: white;
+        }
+    }
+}
