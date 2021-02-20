@@ -1,6 +1,7 @@
 import React from 'react'
-import { Jumbotron, Container, Button } from 'react-bootstrap'
+import { Jumbotron, Container } from 'react-bootstrap'
 import socks from '../assets/ltnHomelessPage.jpg'
+import Button from '../components/Button'
 
 
 const LandingPage = () => {
@@ -12,7 +13,7 @@ const LandingPage = () => {
                     <h6 className='landing__jumbotron-heading2'>
                     Together we can create hope where hope has been lost
                     </h6>
-                    <Button className='landing__jumbotron-donateButton' variant="warning">Donate Today</Button>
+                    <Button />
                 </Container>
                 
                 

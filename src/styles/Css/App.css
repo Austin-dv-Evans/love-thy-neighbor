@@ -7229,18 +7229,32 @@ breakpoint argument choices:
     .landing__jumbotron-heading2 {
       font-size: 2rem; }
     .landing__jumbotron-donateButton {
+      width: 3rem;
+      height: 8rem;
+      color: white;
+      border-radius: 10px;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      top: 20%;
+      left: 40%;
+      border: 5px dotted crimson; }
+
+.button__donate {
+  background-color: red;
+  width: 14rem;
+  height: 3rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 3rem; }
 
 .nav__navbar {
   width: 1000px; }
   .nav__navbar--brand {
-    padding: 1rem;
+    padding: 2rem;
     border: 3px solid red; }
   .nav__navbar--links {
-    font-size: 1.5rem;
-    color: white; }
+    font-size: 3rem;
+    color: white;
+    background-color: black; }
   .nav__navbar--each-link {
     color: white; }

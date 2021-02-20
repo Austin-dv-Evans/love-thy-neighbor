@@ -3,12 +3,13 @@
         width: 1000px;
 
         &--brand{
-            padding: 1rem ;
+            padding: 2rem ;
             border: 3px solid red;
         }
         &--links{
-            font-size: 1.5rem;
+            font-size: 3rem;
             color:white;
+            background-color: black;
 
         }
         &--each-link{

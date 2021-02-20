@@ -9,8 +9,8 @@ const NavbarMain = () => {
             <img
                 alt="socks"
                 src= {logo}
-                width="80"
-                height="60"
+                width="180"
+                height="160"
                 className="d-inline-block align-top"
             />
             </Navbar.Brand>
