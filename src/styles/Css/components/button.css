@@ -1,8 +1,11 @@
 .button__donate {
   background-color: red;
   width: 14rem;
-  height: 3rem;
+  height: 6rem;
   color: #fff;
   font-weight: bold;
-  font-size: 1.5rem;
-  margin-top: 3rem; }
+  font-size: 2rem;
+  border-radius: 8px;
+  font-weight: 400; }
+  .button__donate:hover {
+    background-color: crimson; }
