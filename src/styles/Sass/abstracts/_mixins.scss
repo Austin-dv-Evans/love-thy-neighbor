@@ -5,14 +5,15 @@
     transform: translate(-50%, -50%);
 }
 
-  // Media Query Manager
+
+// Media Query Manager
 /*
 0 - 600 - phone
 600 - 900 - tablet
 900 - 1200 -  tablet landscape
 1200 - 1800  - desktop (normal styles apply)
 1800 + - big desktop
-  */
+*/
 
 /*
 breakpoint argument choices: 
@@ -20,7 +21,7 @@ breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
-  */
+*/
 
 @mixin respond($breakpoint) {
     @if $breakpoint == big-desktop {

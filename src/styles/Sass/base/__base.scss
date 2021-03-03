@@ -6,24 +6,31 @@
     box-sizing: inherit;
 }
 
+:root{
+  --color-primary: #651313;
+  --color-primary-light: #FD3A3A;
+  --color-primary-dark: #4F0606;
+}
+
+
 html {
   // defines what 1 rem is
   font-size: 62.5%; // 1 rem = 10px 10px/16px = 62.5%
-
-
-    // @include respond(big-desktop) {
-    // // 1rem = 12 12/16
-    // font-size: 65%;
-    // }
-    // @include respond(tab-land) {
-    // // width < 1200px?
-    // font-size: 56.25%; // 1rem == 9px 9/16 = 56.25%
-    // }
-    // @include respond(tab-port) {
-    // // width < 900 ?
-    // font-size: 50%; // 1rem = 8px 8/16
-    // }
-    // @include respond(phone) {
-    // font-size: 45%;
-    // }
+  // border box reset
+  box-sizing: border-box;
+  // @include respond(big-desktop) {
+  // // 1rem = 12 12/16
+  // font-size: 65%;
+  // }
+  // @include respond(tab-land) {
+  // // width < 1200px?
+  // font-size: 56.25%; // 1rem == 9px 9/16 = 56.25%
+  // }
+  // @include respond(tab-port) {
+  // // width < 900 ?
+  // font-size: 50%; // 1rem = 8px 8/16
+  // }
+  // @include respond(phone) {
+  // font-size: 45%;
+  // }
 }
