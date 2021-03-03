@@ -1,19 +1,22 @@
 .nav{
+  background-color: black;
     &__navbar{
-        width: 1000px;
-
+      background-color: black;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
         &--brand{
-            padding: 2rem ;
-            border: 3px solid red;
+            height: 15rem;
+            width: 15rem;
         }
-        &--links{
+        &--link{
             font-size: 3rem;
             color:white;
-            background-color: black;
+            margin: 0 5rem 0 3rem;
 
-        }
-        &--each-link{
-            color: white;
+            &:hover{
+              color:var(--color-primary);
+            }
         }
     }
 }

@@ -7193,8 +7193,14 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
   box-sizing: inherit; }
 
+:root {
+  --color-primary: #651313;
+  --color-primary-light: #FD3A3A;
+  --color-primary-dark: #4F0606; }
+
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  box-sizing: border-box; }
 
 /*
 0 - 600 - phone
@@ -7202,18 +7208,17 @@ html {
 900 - 1200 -  tablet landscape
 1200 - 1800  - desktop (normal styles apply)
 1800 + - big desktop
-  */
+*/
 /*
 breakpoint argument choices: 
 - phone
 - tab-port
 - tab-land
 - big-desktop
-  */
+*/
 .landing {
   position: relative; }
   .landing__container {
-    height: 100vh;
     color: white;
     position: absolute;
     top: 20%;
@@ -7235,36 +7240,35 @@ breakpoint argument choices:
       font-size: 3rem;
       text-shadow: 2px 2px #000000;
       text-align: center; }
-    .landing__jumbotron-donateButton {
-      width: 3rem;
-      height: 8rem;
-      color: white;
-      border-radius: 10px;
-      position: absolute;
-      top: 20%;
-      left: 40%;
-      border: 5px dotted crimson; }
 
 .button__donate {
-  background-color: red;
+  background-color: transparent;
   width: 14rem;
   height: 6rem;
-  color: #fff;
+  color: var(--color-primary);
   font-weight: bold;
   font-size: 2rem;
   border-radius: 8px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-top: 2rem;
+  text-shadow: 1px 1px #000000; }
   .button__donate:hover {
-    background-color: crimson; }
+    transform: scale(1.1);
+    font-weight: 700; }
 
-.nav__navbar {
-  width: 1000px; }
-  .nav__navbar--brand {
-    padding: 2rem;
-    border: 3px solid red; }
-  .nav__navbar--links {
-    font-size: 3rem;
-    color: white;
-    background-color: black; }
-  .nav__navbar--each-link {
-    color: white; }
+.nav {
+  background-color: black; }
+  .nav__navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    margin-left: auto; }
+    .nav__navbar--brand {
+      height: 15rem;
+      width: 15rem; }
+    .nav__navbar--link {
+      font-size: 3rem;
+      color: white;
+      margin: 0 5rem 0 3rem; }
+      .nav__navbar--link:hover {
+        color: var(--color-primary); }
