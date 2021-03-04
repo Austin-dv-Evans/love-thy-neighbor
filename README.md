@@ -4,11 +4,11 @@
 
 Website remodel!!! 
 
-Full Stack Engineers - Austin Evans and Andrew Hawley
+###Full Stack Engineers - Austin Evans and Andrew Hawley
 
 Teamed up with 
 
-UX/UI Designers - Amanda Devries and Dylan Eldridge
+###UX/UI Designers - Amanda Devries and Dylan Eldridge
 
 To donate our time and work on improving this wordpress website
 
@@ -23,11 +23,11 @@ We decided they deserved some people to give back to them.
 
 We are taking their worpress site and rebuilding it using....
 
-React.js / NEXT.js
-Sass
-Stripe
-Facebook Developer Interface for Instagram
-Figma
+-React.js / NEXT.js
+-Sass
+-Stripe
+-Facebook Developer Interface for Instagram and 
+-Figma
 
 All Professionally Designed and Tested. 
 
