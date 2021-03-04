@@ -7,6 +7,7 @@ const NavbarMain = () => {
 
   const openMenu = () => {
     setToggle(!toggle)
+    console.log(toggle)
   }
 
   return (
@@ -15,38 +16,42 @@ const NavbarMain = () => {
         <img src={logo} alt="ltnLogo" className="nav__navbar--brand" />
       </a>
       <div className="nav__navbar">
-        {toggle && <button onClick={() => openMenu()} className="nav__menuButton">Menu</button>}
-        {!toggle && (
-          <div className="nav__menu">
-            <a
-              href="#about"
-              className="nav__navbar--link"
-              onClick={() => openMenu()}
-            >
-              About
-            </a>
-            <a
-              href="#about"
-              className="nav__navbar--link"
-              onClick={() => openMenu()}
-            >
-              Donate
-            </a>
-            <a
-              href="#about"
-              className="nav__navbar--link"
-              onClick={() => openMenu()}
-            >
-              Shop
-            </a>
-            <a
-              href="#about"
-              className="nav__navbar--link"
-              onClick={() => openMenu()}
-            >
-              Contact
-            </a>
-          </div>
+        {/* {!toggle && ( */}
+        <div className={toggle ? "nav__menu--true-hidden" : "nav__menu--false-displayed"}>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            About
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Donate
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Shop
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Contact
+          </a>
+        </div>
+        {/* // )} */}
+        {toggle && (
+          <button className="nav__menuButton" onClick={() => openMenu()}>
+            lll
+          </button>
         )}
       </div>
     </nav>

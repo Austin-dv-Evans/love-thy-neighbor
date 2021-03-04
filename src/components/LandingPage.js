@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import socks from '../assets/ltnHomelessPage.jpg'
 import Button from '../components/Button'
 import Navbar from '../components/Navbar'
@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 const LandingPage = () => {
     return (
         <div> 
-            <Jumbotron fluid className="landing__jumbotron" style={{ backgroundImage: `url(${socks})`, backgroundSize: 'cover'}}>
+            <div className="landing__jumbotron" style={{ backgroundImage: `url(${socks})`, backgroundSize: 'cover'}}>
             <Navbar/>
                 <Container className="landing__container">
                     <h1 className='landing__jumbotron-heading1'>Love Thy Neighbor</h1>
@@ -19,7 +19,7 @@ const LandingPage = () => {
                     </h6>
                     <Button />
                 </Container>
-            </Jumbotron>
+            </div>
         </div>
     )
 }
