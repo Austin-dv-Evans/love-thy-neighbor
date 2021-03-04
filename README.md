@@ -6,7 +6,7 @@ Website remodel!!!
 
 Full Stack Engineers - Austin Evans and Andrew Hawley
 
-teamed up with 
+Teamed up with 
 
 UX/UI Designers - Amanda Devries and Dylan Eldridge
 
