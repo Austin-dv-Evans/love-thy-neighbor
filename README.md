@@ -4,11 +4,11 @@
 
 Website remodel!!! 
 
-###Full Stack Engineers - Austin Evans and Andrew Hawley
+### Full Stack Engineers - Austin Evans and Andrew Hawley
 
 Teamed up with 
 
-###UX/UI Designers - Amanda Devries and Dylan Eldridge
+### UX/UI Designers - Amanda Devries and Dylan Eldridge
 
 To donate our time and work on improving this wordpress website
 
