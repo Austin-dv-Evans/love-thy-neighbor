@@ -1,22 +1,40 @@
 .nav{
-  background-color: black;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
     &__navbar{
-      background-color: black;
+      min-height: 10rem;
+      background-color: transparent;
       display: flex;
       align-items: center;
       margin-left: auto;
         &--brand{
             height: 15rem;
-            width: 15rem;
+            width: 22rem;
+            position: absolute;
+            top: 0;
         }
         &--link{
             font-size: 3rem;
             color:white;
             margin: 0 5rem 0 3rem;
-
+            
             &:hover{
               color:var(--color-primary);
             }
         }
+    }
+    &__menu{
+      position: absolute;
+      left: 35%;
+      top: 0;
+      z-index: 1;
+    }
+    &__menuButton{
+      margin: 0 5rem; 
+      padding: 2rem;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
 }

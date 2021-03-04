@@ -9,10 +9,10 @@ import About from './components/About'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <LandingPage />
       <About />
-      <Instagram /> 
+      {/* <Instagram />  */}
     </div>
   );
 }
