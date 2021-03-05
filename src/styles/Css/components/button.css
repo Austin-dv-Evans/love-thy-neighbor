@@ -1,11 +1,14 @@
 .button__donate {
-  background-color: red;
+  background-color: transparent;
   width: 14rem;
   height: 6rem;
-  color: #fff;
+  color: var(--color-primary);
   font-weight: bold;
   font-size: 2rem;
   border-radius: 8px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-top: 12rem;
+  text-shadow: 1px 1px #000000; }
   .button__donate:hover {
-    background-color: crimson; }
+    transform: scale(1.1);
+    font-weight: 700; }

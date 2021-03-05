@@ -1,28 +1,62 @@
-import React from 'react'
-import { Navbar, Nav  } from 'react-bootstrap'
+import React, { useState } from 'react'
 import logo from '../assets/ltnLogo.jpg'
 
 const NavbarMain = () => {
-    return (
-        <Navbar bg="transparent" variant="dark" fixed="top" className="">
-            <Navbar.Brand href="#home" className='nav__navbar--brand'>
-            <img
-                alt="socks"
-                src= {logo}
-                width="180"
-                height="160"
-                className="d-inline-block align-top"
-            />
-            </Navbar.Brand>
-            <Nav className="ml-auto nav__navbar--links">
-                <Nav.Link className="nav__navbar--each-link" href="#home">Socks</Nav.Link>
-                <Nav.Link className="nav__navbar--each-link" href="#about">About</Nav.Link>
-                <Nav.Link className="nav__navbar--each-link" href="#contact">Contact</Nav.Link>
-                <Nav.Link className="nav__navbar--each-link" href="#Donate">Donate</Nav.Link>
-                <Nav.Link className="nav__navbar--each-link" href="#store">Store</Nav.Link>
-            </Nav>
-        </Navbar>
-    )
+
+  let [toggle, setToggle] = useState(true)
+
+  const openMenu = () => {
+    setToggle(!toggle)
+    console.log(toggle)
+  }
+
+  return (
+    <nav className="nav">
+      <a href="#home">
+        <img src={logo} alt="ltnLogo" className="nav__navbar--brand" />
+      </a>
+      <div className="nav__navbar">
+        {/* {!toggle && ( */}
+        <div className={toggle ? "nav__menu--true-hidden" : "nav__menu--false-displayed"}>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            About
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Donate
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Shop
+          </a>
+          <a
+            href="#about"
+            className="nav__navbar--link"
+            onClick={() => openMenu()}
+          >
+            Contact
+          </a>
+        </div>
+        {/* // )} */}
+        {toggle && (
+          <button className="nav__menuButton" onClick={() => openMenu()}>
+            lll
+          </button>
+        )}
+      </div>
+    </nav>
+  )
 }
 
 export default NavbarMain
+

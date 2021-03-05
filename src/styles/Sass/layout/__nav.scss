@@ -1,19 +1,60 @@
 .nav{
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     &__navbar{
-        width: 1000px;
-
+      min-height: 15rem;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
         &--brand{
-            padding: 2rem ;
-            border: 3px solid red;
+            height: 15rem;
+            width: 22rem;
+            position: absolute;
+            top: 0;
         }
-        &--links{
+        &--link{
             font-size: 3rem;
             color:white;
-            background-color: black;
+            margin: 0 5rem 0 3rem;
+            
+            &:hover{
+              color:var(--color-primary);
+            }
+        }
+    }
+    &__menu--true-hidden{
+      z-index: 1;
+      display: none;
+    }
+    &__menu--false-displayed{
+      z-index: 1;
+      margin-right: 8rem;
+      animation-name: moveInLeft;
+      animation-duration: .5s;
+      animation-timing-function: ease-out;
+    }
+    &__menuButton{
+      margin: 0 5rem;
+      transform: rotate(90deg);
+      background-color: transparent;
+      width: 10rem;
+      height: 10rem;
+      color: var(--color-primary);
+      font-weight: bold;
+      font-size: 5rem;
+      border-radius: 8px;
+      font-weight: 400;
+      text-shadow: 1px 1px #000000 ; 
+      transition: all 1s;
 
-        }
-        &--each-link{
-            color: white;
-        }
+      &:hover{
+        transform: scale(1.1);
+        font-weight: 700;
+      }
     }
 }
