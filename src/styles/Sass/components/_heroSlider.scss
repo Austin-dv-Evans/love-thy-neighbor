@@ -1,27 +1,31 @@
 .hero{
-    height: 75vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-}
-
-.hero__image{
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    display: flex;
+    overflow: hidden;
+    transition: all 2s;
+    &__image {
+      width: 100%;
+      object-fit: cover;
+    }
+    &__slide{
+      opacity: 0.3;
+      transition-duration: 3s ease ;
+      animation-duration: 3s;
+    }
+    &__slide--active{
+      opacity: 1;
+      transition: transform opacity;
+      transition-duration: 3s;
+    }
 }
+// {"access_token": "IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR", 
+//   "user_id": 17841402917632023}%
 
-.hero__slide{
-    opacity: 0.5;
-    transition-duration: 1s ease ;
-    transform: translateX(-100%)
-}
-
-.hero__slide--active{
-    opacity: 1;
-    transition: transform opacity;
-    transform: translateX(0);
-    transition-duration: 1.5s;
-}
+//   curl -X GET \
+//   'https://graph.instagram.com/17841402917632023?fields=id,username&access_token=IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR'
+//   {"id":"17841402917632023","username":"hawleyfit"}%
+//   'https://graph.instagram.com/17841402917632023/media?fields=id,username,media_url,caption&access_token=IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR

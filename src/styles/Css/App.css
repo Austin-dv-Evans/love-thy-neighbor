@@ -7267,18 +7267,34 @@ breakpoint argument choices:
     visibility: hidden;
     max-height: 0; } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .landing {
   position: relative;
   z-index: -1; }
   .landing__container {
     color: white;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    width: fit-content;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4); }
   .landing__jumbotron {
     height: 100vh;
     background-position: center;
@@ -7304,11 +7320,33 @@ breakpoint argument choices:
   font-size: 2rem;
   border-radius: 8px;
   font-weight: 400;
-  margin-top: 12rem;
+  margin: 0 5rem 0 3rem;
   text-shadow: 1px 1px #000000; }
   .button__donate:hover {
     transform: scale(1.1);
-    font-weight: 700; }
+    font-weight: 700;
+    color: white; }
+
+.hero {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  display: flex;
+  overflow: hidden;
+  transition: all 2s; }
+  .hero__image {
+    width: 100%;
+    object-fit: cover; }
+  .hero__slide {
+    opacity: 0.3;
+    transition-duration: 3s ease;
+    animation-duration: 3s; }
+  .hero__slide--active {
+    opacity: 1;
+    transition: transform opacity;
+    transition-duration: 3s; }
 
 .nav {
   background-color: transparent;
@@ -7340,7 +7378,10 @@ breakpoint argument choices:
   .nav__menu--false-displayed {
     z-index: 1;
     margin-right: 8rem;
+    padding: 2rem;
+    border-radius: 10px;
     animation-name: moveInLeft;
+    background-color: rgba(0, 0, 0, 0.4);
     animation-duration: .5s;
     animation-timing-function: ease-out; }
   .nav__menuButton {
@@ -7360,9 +7401,48 @@ breakpoint argument choices:
       transform: scale(1.1);
       font-weight: 700; }
 
-.aboutPage__container {
-  display: flex; }
+.aboutPage__heading {
+  font-size: 4rem;
+  color: white;
+  text-align: center; }
+
+.aboutPage__contain {
+  background-color: #2b2929;
+  padding: 10rem 0;
+  height: 100%;
+  width: 100%; }
+
+.aboutPage__container--1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4rem 4rem; }
+
+.aboutPage__container--2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 3rem 4rem 4rem; }
 
 .aboutPage__image {
-  width: 10rem;
-  height: 7rem; }
+  width: 35rem;
+  height: 30rem;
+  border-radius: 20px; }
+
+.aboutPage__textBubble {
+  border: 3px solid white;
+  background-color: var(--color-primary);
+  text-align: end;
+  display: flex;
+  height: fit-content;
+  flex: 30%;
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700; }
+  .aboutPage__textBubble--heading {
+    flex: 30%; }

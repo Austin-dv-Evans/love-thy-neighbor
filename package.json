@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/styles/Sass -o src/styles/css",
-    "watch-css": "node-sass-chokidar src/styles/Sass -o src/styles/css --watch"
+    "watch-sass": "node-sass-chokidar src/styles/Sass -o src/styles/css --watch"
   },
   "eslintConfig": {
     "extends": [

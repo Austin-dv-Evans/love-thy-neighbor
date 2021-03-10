@@ -2,8 +2,8 @@ import React from 'react'
 
 const AboutTextBubble = (props) => {
   return (
-    <div className="aboutTextBubble">
-      <h3 className="aboutTextBubbleHeading">{props.text}</h3>
+    <div className="aboutPage__textBubble">
+      <h3 className="aboutPage__textBubble--heading">{props.text}</h3>
     </div>
   )
 }
