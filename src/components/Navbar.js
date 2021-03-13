@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import logo from '../assets/ltnLogo.jpg'
 import Button from './Button'
+
 const NavbarMain = () => {
 
   let [toggle, setToggle] = useState(true)
 
   const openMenu = () => {
     setToggle(!toggle)
-    console.log(toggle)
   }
 
   return (
@@ -15,7 +15,6 @@ const NavbarMain = () => {
       <a href="#home">
         <img src={logo} alt="ltnLogo" className="nav__navbar--brand" />
       </a>
-
       <div className="nav__navbar">
         <div
           className={
@@ -28,7 +27,7 @@ const NavbarMain = () => {
             className="nav__navbar--link"
             onClick={() => openMenu()}
           >
-            About
+            Find Us
           </a>
           <a
             href="#about"
@@ -42,10 +41,9 @@ const NavbarMain = () => {
             className="nav__navbar--link"
             onClick={() => openMenu()}
           >
-            Contact
+            About
           </a>
         </div>
-        {/* // )} */}
         {toggle && (
           <button className="nav__menuButton" onClick={() => openMenu()}>
             lll

@@ -4,6 +4,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@400;600;700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7279,37 +7280,47 @@ breakpoint argument choices:
   100% {
     opacity: 0; } }
 
-.landing {
+.landing__nameLogo {
+  width: 75rem;
+  position: absolute;
+  top: 30%;
+  left: 0; }
+
+.landing__jumbotron {
+  height: 100vh;
+  background-position: center;
+  background-color: #2b2929;
   position: relative;
-  z-index: -1; }
-  .landing__container {
-    color: white;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    padding: 3rem;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.4); }
-  .landing__jumbotron {
-    height: 100vh;
-    background-position: center;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    padding-top: 0; }
-    .landing__jumbotron-heading1 {
-      font-size: 8rem;
-      margin-bottom: 2rem;
-      text-shadow: 5px 5px #000000;
-      text-align: center; }
-    .landing__jumbotron-heading2 {
-      font-size: 3rem;
-      text-shadow: 2px 2px #000000;
-      text-align: center; }
+  padding-top: 0; }
+  .landing__jumbotron-heading1 {
+    font-size: 6rem;
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 5px 5px #000000;
+    text-align: center;
+    padding-bottom: 3rem; }
+  .landing__jumbotron-heading2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-family: "Krub", sans-serif;
+    font-weight: 700; }
+
+.landing__container {
+  color: white;
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  padding: 6rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .button__donate {
   background-color: transparent;
@@ -7328,46 +7339,65 @@ breakpoint argument choices:
     color: white; }
 
 .hero {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
   position: absolute;
-  top: 0;
-  z-index: -2;
+  background-color: #2b2929;
+  top: 30%;
+  right: 0;
+  z-index: 2;
   display: flex;
   overflow: hidden;
-  transition: all 2s; }
+  transition: all 2s;
+  margin-right: 20px; }
   .hero__image {
-    width: 100%;
-    object-fit: cover; }
-  .hero__slide {
-    opacity: 0.3;
-    transition-duration: 3s ease;
-    animation-duration: 3s; }
-  .hero__slide--active {
-    opacity: 1;
-    transition: transform opacity;
-    transition-duration: 3s; }
+    width: 100%; }
+
+.social {
+  position: relative; }
+  .social__icon--logo {
+    color: white;
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    z-index: 2; }
+  .social__icon--facebook {
+    color: white;
+    position: absolute;
+    top: 95%;
+    left: 60%;
+    transform: translate(-85%, -55%);
+    z-index: 2; }
+  .social__icon--instagram {
+    color: white;
+    position: absolute;
+    top: 95%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2; }
 
 .nav {
-  background-color: transparent;
+  background-color: black;
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center; }
   .nav__navbar {
-    min-height: 15rem;
+    min-height: 13rem;
     background-color: transparent;
     display: flex;
     align-items: center;
     margin-left: auto; }
     .nav__navbar--brand {
-      height: 15rem;
-      width: 22rem;
+      height: 13rem;
+      width: 20rem;
       position: absolute;
       top: 0; }
     .nav__navbar--link {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: white;
       margin: 0 5rem 0 3rem; }
       .nav__navbar--link:hover {
@@ -7388,8 +7418,8 @@ breakpoint argument choices:
     margin: 0 5rem;
     transform: rotate(90deg);
     background-color: transparent;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     color: var(--color-primary);
     font-weight: bold;
     font-size: 5rem;
@@ -7401,48 +7431,41 @@ breakpoint argument choices:
       transform: scale(1.1);
       font-weight: 700; }
 
-.aboutPage__heading {
-  font-size: 4rem;
-  color: white;
-  text-align: center; }
-
-.aboutPage__contain {
+.aboutPage {
   background-color: #2b2929;
-  padding: 10rem 0;
-  height: 100%;
-  width: 100%; }
-
-.aboutPage__container--1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 4rem 4rem; }
-
-.aboutPage__container--2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 3rem 4rem 4rem; }
-
-.aboutPage__image {
-  width: 35rem;
-  height: 30rem;
-  border-radius: 20px; }
-
-.aboutPage__textBubble {
-  border: 3px solid white;
-  background-color: var(--color-primary);
-  text-align: end;
-  display: flex;
-  height: fit-content;
-  flex: 30%;
-  margin: 3rem;
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 700; }
-  .aboutPage__textBubble--heading {
-    flex: 30%; }
+  height: 100vh;
+  width: 100vw; }
+  .aboutPage__heading {
+    font-size: 4rem;
+    color: white;
+    text-align: center; }
+  .aboutPage__contain {
+    background-color: #2b2929;
+    display: flex; }
+  .aboutPage__container--1 {
+    margin: 4rem 4rem; }
+  .aboutPage__container--2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 3rem 4rem 4rem; }
+  .aboutPage__image {
+    width: 65rem;
+    height: 50rem;
+    border-radius: 20px; }
+  .aboutPage__textBubble {
+    border: 3px solid white;
+    background-color: var(--color-primary);
+    text-align: end;
+    display: flex;
+    height: fit-content;
+    flex: 30%;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    font-family: "Krub", sans-serif; }
+    .aboutPage__textBubble--heading {
+      flex: 30%; }

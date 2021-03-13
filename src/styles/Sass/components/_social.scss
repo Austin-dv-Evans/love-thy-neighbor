@@ -1,0 +1,31 @@
+.social{
+  position: relative;
+  &__icon{
+    &--logo{
+      color: white;
+      position: absolute;
+      top: 94%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10rem;
+      z-index: 2;
+    }
+    &--facebook{
+      color: white;
+      position: absolute;
+      top: 95%;
+      left: 60%;
+      transform: translate(-85%, -55%);
+      z-index: 2;
+
+    }
+    &--instagram{
+      color: white;
+      position: absolute;
+      top: 95%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+}

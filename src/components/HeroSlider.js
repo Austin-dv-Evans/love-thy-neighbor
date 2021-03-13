@@ -1,20 +1,21 @@
 import React, {useState, useEffect} from 'react'
 // import LtnHomelessSign from '../assets/ltnHomelessPage.jpg'
-import LtnSadSleepingFloor from '../assets/ltnSadSleepingFloor.jpg'
+import convo1 from '../assets/convo1.jpg'
 import supplies from '../assets/suppliesLTN.jpg'
 import crewLTN from '../assets/crewLTN.jpg'
-import Unsplash from '../assets/unsplash-homeless.jpg'
+import walkingUp from '../assets/walkingUp.jpg'
+// import Unsplash from '../assets/unsplash-homeless.jpg'
 
 function HeroSlider() {
     const [current, setCurrent] = useState(0)
-    const slides = [supplies, LtnSadSleepingFloor, crewLTN, Unsplash]
+    const slides = [supplies, convo1, crewLTN, walkingUp]
     
     const nextSlide = () => {
         setCurrent(current === slides.length - 1 ? 0 : current + 1 )
     }
     
     useEffect(()=> {
-        setTimeout(nextSlide, 100000)
+        setTimeout(nextSlide, 10000)
     })
 
     return (
