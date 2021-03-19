@@ -7482,3 +7482,24 @@ breakpoint argument choices:
   color: white;
   text-align: center;
   font-family: "Indie Flower", cursive; }
+
+.findUs__container {
+  height: 85vh;
+  background-color: #2b2929;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.findUs__instaScroll {
+  height: 50rem;
+  margin-top: 3rem;
+  background-color: orangered;
+  overflow-y: scroll;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .findUs__instaScroll--image {
+    margin-top: 40rem;
+    height: 40rem; }

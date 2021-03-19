@@ -2,9 +2,9 @@ import React from 'react'
 
 import convo2 from '../assets/convo2.jpg'
 
-import AboutImage from './AboutImage'
-import AboutTextBubble from './AboutTextBubble'
-import Social from './Social'
+import AboutImage from '../components/AboutImage'
+import AboutTextBubble from '../components/AboutTextBubble'
+import Social from '../components/Social'
 
 const About = () => {
   return (
