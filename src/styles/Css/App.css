@@ -7188,22 +7188,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-:root {
-  --color-primary: #651313;
-  --color-primary-light: #FD3A3A;
-  --color-primary-dark: #4F0606; }
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box; }
-
 /*
 0 - 600 - phone
 600 - 900 - tablet
@@ -7281,20 +7265,56 @@ breakpoint argument choices:
   100% {
     opacity: 0; } }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+:root {
+  --color-primary: #651313;
+  --color-primary-light: #FD3A3A;
+  --color-primary-dark: #4F0606; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 112.5em) {
+    html {
+      font-size: 65%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
+
 .landing__nameLogo {
   width: 58%;
   position: absolute;
   top: 5%;
   left: -3%;
   z-index: 2;
-  transform: rotate(-3deg); }
+  transform: rotate(-3deg);
+  filter: drop-shadow(0px 2px 10px black); }
+  @media only screen and (max-width: 56.25em) {
+    .landing__nameLogo {
+      left: 21%;
+      top: 2%; } }
 
 .landing__jumbotron {
   height: 85vh;
   background-position: center;
   background-color: #2b2929;
   position: relative;
-  padding-top: 0; }
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .landing__jumbotron-heading1 {
     font-size: 6rem;
     font-family: "Krub", sans-serif;
@@ -7316,7 +7336,7 @@ breakpoint argument choices:
   z-index: 2;
   top: 66%;
   left: 22%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(0deg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7324,6 +7344,13 @@ breakpoint argument choices:
   padding: 6rem 4rem;
   border-radius: 2px;
   background-color: black; }
+  @media only screen and (max-width: 56.25em) {
+    .landing__container {
+      width: 60%;
+      top: 77%;
+      left: 48.5%;
+      padding: 1rem 4rem;
+      transform: translate(-50%, -50%) rotate(3deg); } }
 
 .button__donate {
   background-color: transparent;
@@ -7352,11 +7379,22 @@ breakpoint argument choices:
   background-color: #2b2929;
   right: 0;
   z-index: 1;
-  display: flex;
   overflow: hidden;
   transition: all 2s; }
+  @media only screen and (max-width: 56.25em) {
+    .hero {
+      right: calc(50% - 30%);
+      top: 20%; } }
   .hero__image {
     width: 100%; }
+  .hero__slide {
+    opacity: 0;
+    transition-duration: 3s ease;
+    animation-duration: 3s; }
+  .hero__slide--active {
+    opacity: 1;
+    transition: transform opacity;
+    transition-duration: 3s; }
 
 .social__container {
   position: fixed;
@@ -7404,7 +7442,7 @@ breakpoint argument choices:
       position: absolute;
       top: 0; }
     .nav__navbar--link {
-      font-size: 2.5rem;
+      font-size: 1.7rem;
       color: white;
       margin: 0 5rem 0 3rem; }
       .nav__navbar--link:hover {
@@ -7421,15 +7459,18 @@ breakpoint argument choices:
     background-color: rgba(0, 0, 0, 0.4);
     animation-duration: .5s;
     animation-timing-function: ease-out; }
+    @media only screen and (max-width: 75em) {
+      .nav__menu--false-displayed {
+        margin-right: 4rem; } }
   .nav__menuButton {
-    margin: 0 5rem;
+    margin: 0 3rem;
     transform: rotate(90deg);
     background-color: transparent;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 3rem;
     border-radius: 8px;
     font-weight: 400;
     text-shadow: 1px 1px #000000;

@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 10px var(--color-primary);
+
     &__navbar{
       min-height: 13rem;
       background-color: transparent;
@@ -19,7 +20,7 @@
             top: 0;
         }
         &--link{
-            font-size: 2.5rem;
+            font-size: 1.7rem;
             color:white;
             margin: 0 5rem 0 3rem;
             
@@ -35,6 +36,9 @@
     &__menu--false-displayed{
       z-index: 1;
       margin-right: 8rem;
+      @include respond(tab-land){
+        margin-right: 4rem;
+      }
       padding: 2rem;
       border-radius: 10px;
       animation-name: moveInLeft;
@@ -43,14 +47,14 @@
       animation-timing-function: ease-out;
     }
     &__menuButton{
-      margin: 0 5rem;
+      margin: 0 3rem;
       transform: rotate(90deg);
       background-color: transparent;
-      width: 8rem;
-      height: 8rem;
+      width: 6rem;
+      height: 6rem;
       color: var(--color-primary);
       font-weight: bold;
-      font-size: 5rem;
+      font-size: 3rem;
       border-radius: 8px;
       font-weight: 400;
       text-shadow: 1px 1px #000000 ; 

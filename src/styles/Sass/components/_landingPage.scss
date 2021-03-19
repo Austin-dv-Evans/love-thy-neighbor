@@ -6,6 +6,11 @@
     left: -3%;
     z-index: 2;
     transform: rotate(-3deg);
+    filter: drop-shadow( 0px 2px 10px black);
+    @include respond(tab-port){
+      left: 21%;
+      top: 2%;
+    }
   }
   
   &__jumbotron{
@@ -14,6 +19,9 @@
       background-color: $grey-1;
       position: relative;
       padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       &-heading1{
           font-size: 6rem;
           font-family:  $Krubfont;
@@ -38,7 +46,7 @@
       z-index: 2;
       top: 66%;
       left: 22%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(0deg);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -46,5 +54,12 @@
       padding: 6rem 4rem;
       border-radius: 2px;
       background-color: rgba($color: #000000, $alpha: 1);
+      @include respond(tab-port){
+        width: 60%;
+        top: 77%;
+        left: 48.5%;
+        padding: 1rem 4rem;
+        transform: translate(-50%, -50%) rotate(3deg);
+      }
   }
 }

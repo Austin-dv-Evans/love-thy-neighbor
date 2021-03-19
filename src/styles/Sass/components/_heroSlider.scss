@@ -6,22 +6,26 @@
     // top: 25%;
     right: 0;
     z-index: 1;
-    display: flex;
     overflow: hidden;
     transition: all 2s;
+    @include respond(tab-port){
+      right: calc(50% - 30%);
+      top: 20%;
+    }
+    
     &__image {
       width: 100%;
     }
-    // &__slide{
-    //   opacity: 0;
-    //   transition-duration: 3s ease ;
-    //   animation-duration: 3s;
-    // }
-    // &__slide--active{
-    //   opacity: 1;
-    //   transition: transform opacity;
-    //   transition-duration: 3s;
-    // }
+    &__slide{
+      opacity: 0;
+      transition-duration: 3s ease ;
+      animation-duration: 3s;
+    }
+    &__slide--active{
+      opacity: 1;
+      transition: transform opacity;
+      transition-duration: 3s;
+    }
 }
 // {"access_token": "IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR", 
 //   "user_id": 17841402917632023}%
