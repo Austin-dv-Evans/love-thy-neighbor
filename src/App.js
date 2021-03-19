@@ -27,6 +27,7 @@ function App() {
           </Route>
           {/* <Instagram/> */}
         </Switch>
+        
       </Router>
     </div>
   );

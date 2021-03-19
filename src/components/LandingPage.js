@@ -8,7 +8,6 @@ const LandingPage = () => {
     return (
       <>
       <HeroSlider/>
-      <Social/>
       <div className="landing__jumbotron">
           <img src={fullName} alt="full name logo" className="landing__nameLogo"/>
         <div className="landing__container">
@@ -17,8 +16,8 @@ const LandingPage = () => {
             Together we can create hope <br/> where hope has been lost.
           </h6>
         </div>
-        
       </div>
+      <Social/>
       </>
     )
 }

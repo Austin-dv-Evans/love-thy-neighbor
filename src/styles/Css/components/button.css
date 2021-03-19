@@ -5,11 +5,15 @@
   color: var(--color-primary);
   font-weight: bold;
   font-size: 2rem;
-  border-radius: 8px;
+  border-color: var(--color-primary);
+  border-radius: 4px;
   font-weight: 400;
   margin: 0 5rem 0 3rem;
-  text-shadow: 1px 1px #000000; }
+  text-shadow: 1px 1px #000000;
+  border-width: 3px; }
   .button__donate:hover {
     transform: scale(1.1);
     font-weight: 700;
-    color: white; }
+    color: white;
+    box-shadow: 0px 0px 15px var(--color-primary);
+    text-shadow: 3px 3px 3px var(--color-primary); }

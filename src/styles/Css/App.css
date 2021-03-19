@@ -7282,10 +7282,12 @@ breakpoint argument choices:
     opacity: 0; } }
 
 .landing__nameLogo {
-  width: 45%;
+  width: 58%;
   position: absolute;
   top: 5%;
-  left: 3%; }
+  left: -3%;
+  z-index: 2;
+  transform: rotate(-3deg); }
 
 .landing__jumbotron {
   height: 85vh;
@@ -7305,22 +7307,23 @@ breakpoint argument choices:
     font-size: 2.5rem;
     text-shadow: 2px 2px #000000;
     text-align: center;
-    font-family: "Krub", sans-serif;
+    font-family: "Indie Flower", cursive;
     font-weight: 700; }
 
 .landing__container {
   color: white;
   position: absolute;
-  top: 55%;
-  left: 25%;
+  z-index: 2;
+  top: 66%;
+  left: 22%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35%;
-  padding: 6rem;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.4); }
+  width: 31%;
+  padding: 6rem 4rem;
+  border-radius: 2px;
+  background-color: black; }
 
 .button__donate {
   background-color: transparent;
@@ -7329,62 +7332,66 @@ breakpoint argument choices:
   color: var(--color-primary);
   font-weight: bold;
   font-size: 2rem;
-  border-radius: 8px;
+  border-color: var(--color-primary);
+  border-radius: 4px;
   font-weight: 400;
   margin: 0 5rem 0 3rem;
-  text-shadow: 1px 1px #000000; }
+  text-shadow: 1px 1px #000000;
+  border-width: 3px; }
   .button__donate:hover {
     transform: scale(1.1);
     font-weight: 700;
-    color: white; }
+    color: white;
+    box-shadow: 0px 0px 15px var(--color-primary);
+    text-shadow: 3px 3px 3px var(--color-primary); }
 
 .hero {
-  height: 50%;
-  width: 45%;
+  width: 58%;
+  margin: 2rem 2rem 0 0;
   position: absolute;
   background-color: #2b2929;
-  top: 25%;
-  right: 3%;
-  z-index: 2;
+  right: 0;
+  z-index: 1;
   display: flex;
   overflow: hidden;
-  transition: all 2s;
-  margin-right: 20px; }
+  transition: all 2s; }
   .hero__image {
     width: 100%; }
 
-.social {
-  position: relative; }
-  .social__icon--logo {
-    color: white;
-    position: absolute;
-    top: 94%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10rem;
-    z-index: 2; }
-  .social__icon--facebook {
-    color: white;
-    position: absolute;
-    top: 95%;
-    left: 60%;
-    transform: translate(-85%, -55%);
-    z-index: 2; }
-  .social__icon--instagram {
-    color: white;
-    position: absolute;
-    top: 95%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    z-index: 2; }
+.social__container {
+  position: fixed;
+  top: 94%;
+  left: calc(50% - 9%);
+  width: 18%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  z-index: 3; }
+
+.social__icon--logo {
+  transform: translateY(-20px);
+  color: white;
+  width: 7rem;
+  z-index: 2; }
+
+.social__icon--facebook {
+  color: white;
+  z-index: 2;
+  opacity: .7; }
+
+.social__icon--instagram {
+  color: white;
+  z-index: 2;
+  opacity: .7; }
 
 .nav {
   background-color: black;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  box-shadow: 0px 3px 10px var(--color-primary); }
   .nav__navbar {
     min-height: 13rem;
     background-color: transparent;
@@ -7426,10 +7433,12 @@ breakpoint argument choices:
     border-radius: 8px;
     font-weight: 400;
     text-shadow: 1px 1px #000000;
-    transition: all 1s; }
+    transition: all 1s;
+    border-color: var(--color-primary); }
     .nav__menuButton:hover {
       transform: scale(1.1);
-      font-weight: 700; }
+      font-weight: 700;
+      box-shadow: 0px 0px 15px var(--color-primary); }
 
 .aboutPage__contain {
   background-color: #2b2929;

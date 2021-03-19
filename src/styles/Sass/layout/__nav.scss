@@ -1,11 +1,11 @@
 .nav{
   background-color: black;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  box-shadow: 0px 3px 10px var(--color-primary);
     &__navbar{
       min-height: 13rem;
       background-color: transparent;
@@ -55,10 +55,12 @@
       font-weight: 400;
       text-shadow: 1px 1px #000000 ; 
       transition: all 1s;
+      border-color: var(--color-primary);
 
       &:hover{
         transform: scale(1.1);
         font-weight: 700;
+        box-shadow: 0px 0px 15px var(--color-primary);
       }
     }
 }

@@ -1,9 +1,11 @@
 .landing{
   &__nameLogo{
-    width: 45%;
+    width: 58%;
     position: absolute;
     top: 5%;
-    left: 3%;
+    left: -3%;
+    z-index: 2;
+    transform: rotate(-3deg);
   }
   
   &__jumbotron{
@@ -25,22 +27,24 @@
           font-size: 2.5rem;
           text-shadow: 2px 2px #000000 ;
           text-align: center;
-          font-family:  $Krubfont;
+          font-family:  $KidFont;
           font-weight: 700;
+          
       }
   }
   &__container{
       color: white;
       position: absolute;
-      top: 55%;
-      left: 25%;
+      z-index: 2;
+      top: 66%;
+      left: 22%;
       transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 35%;
-      padding: 6rem;
-      border-radius: 10px;
-      background-color: rgba($color: #000000, $alpha: 0.4);
+      width: 31%;
+      padding: 6rem 4rem;
+      border-radius: 2px;
+      background-color: rgba($color: #000000, $alpha: 1);
   }
 }
