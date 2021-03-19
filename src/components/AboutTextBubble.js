@@ -2,9 +2,10 @@ import React from 'react'
 
 const AboutTextBubble = (props) => {
   return (
-    <div className="aboutPage__textBubble">
-      <h3 className="aboutPage__textBubble--heading">{props.text}</h3>
-    </div>
+    <>
+      <h3 className="aboutPage__textBubble--heading">{props.heading}</h3>
+      <p className="aboutPage__textBubble--text">{props.text}</p>
+    </>
   )
 }
 

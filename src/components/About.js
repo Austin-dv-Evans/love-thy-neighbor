@@ -1,23 +1,26 @@
 import React from 'react'
-import convo1 from '../assets/convo1.jpg'
+
 import convo2 from '../assets/convo2.jpg'
+
 import AboutImage from './AboutImage'
 import AboutTextBubble from './AboutTextBubble'
-import Navbar from './Navbar'
+import Social from './Social'
+
 const About = () => {
   return (
-    <div className="aboutPage">
-      <Navbar />
+
       <div id="about" className="aboutPage__contain">
-        <div className="aboutPage__container--1">
-          <AboutImage image={convo1} />
+        <div className="aboutPage__container--image">
+          <AboutImage image={convo2} />
         </div>
-        <div className="aboutPage__container--2">
-            <AboutTextBubble text="We are out on the street to help our brothers and sisters" />
-            <AboutTextBubble text="we give out food, socks and having a conversation" />
+        <div className="aboutPage__container--text">
+          <AboutTextBubble
+            heading="The Mission"
+            text="Striving to always to do good to one another, to everyone, by serving our brothers and sisters in need."
+          />
         </div>
+      <Social />
       </div>
-    </div>
   )
 }
 

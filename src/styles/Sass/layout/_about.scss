@@ -1,49 +1,56 @@
 .aboutPage {
-  background-color: rgb(43, 41, 41);
-  height: 100vh;
-  width: 100vw;
-  &__heading{
-    font-size: 4rem;
-    color: white;
-    text-align: center;
-  }
+
   &__contain{
     background-color: rgb(43, 41, 41);
-    display: flex;
-
-  }
-  &__container--1 {
-    margin: 4rem 4rem;
-  }
-  &__container--2 {
+    height: 85vh;
+    width: 100vw;
+    background-color: rgb(43, 41, 41);
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    margin: 0 3rem 4rem 4rem;
+    align-items: center;
+  }
+  &__container--image {
+    margin: -10rem 4rem 0rem 4rem;
+  }
+  &__container--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: -10rem 4rem 0 4rem;
   }
 
   &__image {
-    width: 65rem;
-    height: 50rem;
+    width: 55rem;
+    height: 40rem;
     border-radius: 20px;
   }
-  &__textBubble{
+  &__textBubble--heading{
     border: 3px solid white;
     background-color: var(--color-primary);
     text-align: end;
     display: flex;
     height: fit-content;
-    flex: 30%;
     margin: 3rem;
     padding: 2rem;
     border-radius: 10px;
-    font-size: 4rem;
+    font-size: 7rem;
     color: white;
     text-align: center;
-    font-family: $Krubfont;
-
-    &--heading{
-      flex: 30%;
-    }
+    font-family: $KidFont;
+  }
+  &__textBubble--text{
+    border: 3px solid white;
+    background-color: var(--color-primary);
+    text-align: end;
+    display: flex;
+    height: fit-content;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: $KidFont;
   }
 }
