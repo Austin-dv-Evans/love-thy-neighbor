@@ -1,0 +1,58 @@
+export const shopItems = {
+  crewneck: {
+    id: 1,
+    name: "crewneck",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 28.0,
+    colors: ["black", "dark heather grey"],
+  },
+  classicHoodie: {
+    id: 2,
+    name: "Classic Hoodie",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 32.0,
+    colors: ["black", "dark heather grey"],
+  },
+  tshirt: {
+    id: 3,
+    name: "T-Shirt",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 18.0,
+    colors: ["black", "dark heather grey", "light grey"],
+  },
+  joggers: {
+    id: 4,
+    name: "Joggers",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 30.0,
+    colors: ["black", "dark heather grey", "light grey"],
+  },
+  logoCrewneck: {
+    id: 5,
+    name: "Logo Crewneck",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 28.0,
+    colors: ["black", "dark heather grey"],
+  },
+  logoTshirt: {
+    id: 6,
+    name: "Logo  T-shirt",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 18.0,
+    colors: ["black", "dark heather grey", "light grey"],
+  },
+  logoHoodie: {
+    id: 7,
+    name: "Logo Hoodie",
+    sizes: ["small", "medium", "large", "extra large", "xxl", "xxxl"],
+    price: 32.0,
+    colors: ["black", "dark heather grey"],
+  },
+  socks: {
+    id: 8,
+    name: "Socks",
+    sizes: ["small", "medium", "large", "extra large"],
+    price: 20.0,
+    colors: ["black"],
+  },
+}

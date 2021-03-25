@@ -2,17 +2,28 @@ import '../src/styles/Sass/App.scss'
 // import '../src/styles/Css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
 import LandingPage from './components/LandingPage'
 import About from './screens/About'
 import Navbar from './components/Navbar'
 import Instagram from './components/Instagram'
 import FindUs from './components/FindUs';
-
+import Shop from './screens/Shop';
+import PaymentForm from './components/PaymentForm'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
+const PUBLIC_KEY = process.env.REACT_APP_KEY
+
+const stripeTestPromise = loadStripe(PUBLIC_KEY)
+
+
 function App() {
+  console.log(stripeTestPromise);
   return (
-    <div className="App">
+    <Elements stripe={stripeTestPromise}>
+      <div className="App">
       <Router>
         <Navbar />
         <Switch>
@@ -25,11 +36,15 @@ function App() {
           <Route path='/findus'>
             <FindUs/>
           </Route>
-          {/* <Instagram/> */}
+          <Route path='/shop'>
+            <Shop/>
+            <PaymentForm />
+          </Route>
         </Switch>
-        
       </Router>
     </div>
+    </Elements>
+    
   );
 }
 

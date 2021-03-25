@@ -8,9 +8,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond (tab-land) {
+      flex-direction: column;
+    }
   }
   &__container--image {
     margin: -10rem 4rem 0rem 4rem;
+    @include respond (tab-land) {
+      margin-top: 0;
+    }
+    
   }
   &__container--text {
     display: flex;
@@ -24,6 +31,9 @@
     width: 55rem;
     height: 40rem;
     border-radius: 20px;
+    @include respond (phone) {
+      margin-top: -5rem;
+    }
   }
   &__textBubble--heading{
     border: 3px solid white;
@@ -38,6 +48,9 @@
     color: white;
     text-align: center;
     font-family: $KidFont;
+    @include respond (tab-land) {
+      margin: 0;
+    }
   }
   &__textBubble--text{
     border: 3px solid white;
@@ -52,5 +65,8 @@
     color: white;
     text-align: center;
     font-family: $KidFont;
+    @include respond (tab-land) {
+      margin: 0;
+    }
   }
 }

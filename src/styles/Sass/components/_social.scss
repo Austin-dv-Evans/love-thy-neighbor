@@ -9,6 +9,12 @@
     display: flex;
     justify-content: space-around;
     z-index: 3;
+    
+    @include respond(tab-port){
+      left: 0%;
+      top: 50%;
+      flex-direction: column;
+    }
   }
   &__icon{
     &--logo{
@@ -16,17 +22,26 @@
       color: white;
       width: 7rem;
       z-index: 2;
+      @include respond(tab-port){
+        transform: translateY(0);
+      }
     }
     &--facebook{
       color: white;
       z-index: 2;
       opacity: .7;
-
+      @include respond(tab-port){
+        margin-left: 1.8rem;
+      }
     }
     &--instagram{
       color: white;
       z-index: 2;
       opacity: .7;
+
+      @include respond(tab-port){
+        margin-left: 1.8rem;
+      }
     }
   }
 }

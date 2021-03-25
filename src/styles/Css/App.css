@@ -7293,64 +7293,70 @@ html {
     html {
       font-size: 45%; } }
 
-.landing__nameLogo {
-  width: 58%;
-  position: absolute;
-  top: 5%;
-  left: -3%;
-  z-index: 2;
-  transform: rotate(-3deg);
-  filter: drop-shadow(0px 2px 10px black); }
-  @media only screen and (max-width: 56.25em) {
-    .landing__nameLogo {
-      left: 21%;
-      top: 2%; } }
-
-.landing__jumbotron {
-  height: 85vh;
-  background-position: center;
-  background-color: #2b2929;
-  position: relative;
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .landing__jumbotron-heading1 {
-    font-size: 6rem;
-    font-family: "Krub", sans-serif;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    text-shadow: 5px 5px #000000;
-    text-align: center;
-    padding-bottom: 3rem; }
-  .landing__jumbotron-heading2 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px #000000;
-    text-align: center;
-    font-family: "Indie Flower", cursive;
-    font-weight: 700; }
-
-.landing__container {
-  color: white;
-  position: absolute;
-  z-index: 2;
-  top: 66%;
-  left: 22%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 31%;
-  padding: 6rem 4rem;
-  border-radius: 2px;
-  background-color: black; }
-  @media only screen and (max-width: 56.25em) {
-    .landing__container {
-      width: 60%;
-      top: 77%;
-      left: 48.5%;
-      padding: 1rem 4rem;
-      transform: translate(-50%, -50%) rotate(3deg); } }
+.landing {
+  overflow: hidden; }
+  .landing__nameLogo {
+    width: 58%;
+    position: absolute;
+    top: 5%;
+    left: -3%;
+    z-index: 2;
+    transform: rotate(-3deg);
+    filter: drop-shadow(0px 2px 10px black); }
+    @media only screen and (max-width: 56.25em) {
+      .landing__nameLogo {
+        left: 21%;
+        top: 2%; } }
+    @media only screen and (max-width: 37.5em) {
+      .landing__nameLogo {
+        width: 100%;
+        left: 0;
+        top: 6%; } }
+  .landing__jumbotron {
+    height: 80vh;
+    background-position: center;
+    background-color: #2b2929;
+    position: relative;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .landing__jumbotron-heading1 {
+      font-size: 6rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-shadow: 5px 5px #000000;
+      text-align: center;
+      padding-bottom: 3rem; }
+    .landing__jumbotron-heading2 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px #000000;
+      text-align: center;
+      font-family: "Indie Flower", cursive;
+      font-weight: 700; }
+  .landing__container {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 60%;
+    left: 22%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 31%;
+    padding: 6rem 4rem;
+    border-radius: 2px;
+    background-color: black; }
+    @media only screen and (max-width: 56.25em) {
+      .landing__container {
+        width: 60%;
+        top: 77%;
+        left: 48.5%;
+        padding: 1rem 4rem;
+        margin-top: 4.5rem;
+        transform: translate(-50%, -50%) rotate(2deg); } }
 
 .button__donate {
   background-color: transparent;
@@ -7378,6 +7384,7 @@ html {
   position: absolute;
   background-color: #2b2929;
   right: 0;
+  top: 5%;
   z-index: 1;
   overflow: hidden;
   transition: all 2s; }
@@ -7385,6 +7392,13 @@ html {
     .hero {
       right: calc(50% - 30%);
       top: 20%; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      width: 75%;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%); } }
   .hero__image {
     width: 100%; }
   .hero__slide {
@@ -7405,22 +7419,36 @@ html {
   display: flex;
   justify-content: space-around;
   z-index: 3; }
+  @media only screen and (max-width: 56.25em) {
+    .social__container {
+      left: 0%;
+      top: 50%;
+      flex-direction: column; } }
 
 .social__icon--logo {
   transform: translateY(-20px);
   color: white;
   width: 7rem;
   z-index: 2; }
+  @media only screen and (max-width: 56.25em) {
+    .social__icon--logo {
+      transform: translateY(0); } }
 
 .social__icon--facebook {
   color: white;
   z-index: 2;
   opacity: .7; }
+  @media only screen and (max-width: 56.25em) {
+    .social__icon--facebook {
+      margin-left: 1.8rem; } }
 
 .social__icon--instagram {
   color: white;
   z-index: 2;
   opacity: .7; }
+  @media only screen and (max-width: 56.25em) {
+    .social__icon--instagram {
+      margin-left: 1.8rem; } }
 
 .nav {
   background-color: black;
@@ -7431,7 +7459,7 @@ html {
   justify-content: center;
   box-shadow: 0px 3px 10px var(--color-primary); }
   .nav__navbar {
-    min-height: 13rem;
+    height: 16vh;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -7489,9 +7517,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .aboutPage__contain {
+      flex-direction: column; } }
 
 .aboutPage__container--image {
   margin: -10rem 4rem 0rem 4rem; }
+  @media only screen and (max-width: 75em) {
+    .aboutPage__container--image {
+      margin-top: 0; } }
 
 .aboutPage__container--text {
   display: flex;
@@ -7504,6 +7538,9 @@ html {
   width: 55rem;
   height: 40rem;
   border-radius: 20px; }
+  @media only screen and (max-width: 37.5em) {
+    .aboutPage__image {
+      margin-top: -5rem; } }
 
 .aboutPage__textBubble--heading {
   border: 3px solid white;
@@ -7518,6 +7555,9 @@ html {
   color: white;
   text-align: center;
   font-family: "Indie Flower", cursive; }
+  @media only screen and (max-width: 75em) {
+    .aboutPage__textBubble--heading {
+      margin: 0; } }
 
 .aboutPage__textBubble--text {
   border: 3px solid white;
@@ -7532,6 +7572,9 @@ html {
   color: white;
   text-align: center;
   font-family: "Indie Flower", cursive; }
+  @media only screen and (max-width: 75em) {
+    .aboutPage__textBubble--text {
+      margin: 0; } }
 
 .findUs__container {
   height: 85vh;

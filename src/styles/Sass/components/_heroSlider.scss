@@ -3,14 +3,21 @@
     margin: 2rem 2rem 0 0;
     position: absolute;
     background-color: rgb(43, 41, 41);
-    // top: 25%;
     right: 0;
+    top: 5%;
     z-index: 1;
     overflow: hidden;
     transition: all 2s;
     @include respond(tab-port){
       right: calc(50% - 30%);
       top: 20%;
+    }
+    @include respond(phone){
+        width: 75%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     &__image {

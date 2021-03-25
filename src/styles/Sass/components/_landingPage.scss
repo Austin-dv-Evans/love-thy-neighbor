@@ -1,4 +1,5 @@
 .landing{
+  overflow: hidden;
   &__nameLogo{
     width: 58%;
     position: absolute;
@@ -11,10 +12,15 @@
       left: 21%;
       top: 2%;
     }
+    @include respond(phone){
+        width: 100%;
+        left: 0;
+        top: 6%;
+    }
   }
   
   &__jumbotron{
-      height: 85vh;
+      height: 80vh;
       background-position: center;
       background-color: $grey-1;
       position: relative;
@@ -44,7 +50,7 @@
       color: white;
       position: absolute;
       z-index: 2;
-      top: 66%;
+      top: 60%;
       left: 22%;
       transform: translate(-50%, -50%) rotate(0deg);
       display: flex;
@@ -59,7 +65,8 @@
         top: 77%;
         left: 48.5%;
         padding: 1rem 4rem;
-        transform: translate(-50%, -50%) rotate(3deg);
+        margin-top: 4.5rem;
+        transform: translate(-50%, -50%) rotate(2deg);
       }
   }
 }

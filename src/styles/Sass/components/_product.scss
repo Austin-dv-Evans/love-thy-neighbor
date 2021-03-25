@@ -1,0 +1,10 @@
+.product {
+  &__item {
+    &-container{
+      width: 15rem;
+    }
+    &-image {
+      width: 25rem;
+    }
+  }
+}

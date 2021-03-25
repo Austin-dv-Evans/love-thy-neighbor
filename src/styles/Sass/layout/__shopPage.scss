@@ -1,0 +1,13 @@
+.shop {
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: var(--color-primary);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+  }
+}
