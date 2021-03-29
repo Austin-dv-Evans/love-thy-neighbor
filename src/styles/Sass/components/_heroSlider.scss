@@ -1,5 +1,4 @@
 .hero{
-    width: 58%;
     margin: 2rem 2rem 0 0;
     position: absolute;
     background-color: rgb(43, 41, 41);
@@ -8,20 +7,40 @@
     z-index: 1;
     overflow: hidden;
     transition: all 2s;
+    @include respond(big-desktop) {
+        width: 52%
+    }
+    @include respond(tab-land) {
+        right: 6%;
+        top: 8%;
+    }
     @include respond(tab-port){
-      right: calc(50% - 30%);
+      width: 60%;
+      right: 19%;
       top: 20%;
     }
     @include respond(phone){
-        width: 75%;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      width: 68%;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include respond(tiny-phone){
+      width: 75%;
+    }
+    @include respond(short){
+      width: 45%;
+      right: 12%;
+    }
+    @include respond(short and phone){
+      width: 75%;
+      right: 12%;
     }
     
     &__image {
       width: 100%;
+      
     }
     &__slide{
       opacity: 0;

@@ -1,5 +1,4 @@
 .social{
-  
   &__container {
     position: fixed;
     top: 94%;
@@ -9,11 +8,18 @@
     display: flex;
     justify-content: space-around;
     z-index: 3;
-    
+    @include respond(big-desktop){
+      top: 94%;
+      left: 15%;
+    }
     @include respond(tab-port){
       left: 0%;
       top: 50%;
       flex-direction: column;
+    }
+    @include respond(tiny-phone){
+      left: 0%;
+      top: 75%;
     }
   }
   &__icon{
@@ -24,6 +30,8 @@
       z-index: 2;
       @include respond(tab-port){
         transform: translateY(0);
+        transform: translateX(3px);
+        margin: 1rem 0;
       }
     }
     &--facebook{

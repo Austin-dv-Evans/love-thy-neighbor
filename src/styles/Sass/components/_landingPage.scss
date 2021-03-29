@@ -3,7 +3,7 @@
   &__nameLogo{
     width: 58%;
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: -3%;
     z-index: 2;
     transform: rotate(-3deg);
@@ -20,7 +20,7 @@
   }
   
   &__jumbotron{
-      height: 80vh;
+      height: 85vh;
       background-position: center;
       background-color: $grey-1;
       position: relative;

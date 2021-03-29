@@ -54,4 +54,10 @@ breakpoint argument choices:
         @content;
     }
     }
+
+    @if $breakpoint == short {
+      @media only screen and (max-height: 47.5em){
+        @content
+      }
+    }
 }

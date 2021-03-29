@@ -16,20 +16,24 @@ const Shop = () => {
   }
   return (
     <div className="shop__page">
-        <h1>Welcome to the Shop</h1>
+      <div className="shop__page-heading">
+        <h1>Represent Love Thy Neighbor</h1>
+      </div>
         <h1>Your Item Count is {cart.length}</h1>
-        <h1>Your Cart Total is ${cart.length > 0 ? cartTotal() : '$0.00'}</h1>
-        {Object.values(shopItems).map((values) => {
-          return (
-            <Link key={values.id} to={`/shop/${values.id}`}>
-              <SmallProductItem
-                key={values.id}
-                product={values}
-                addToCart={handleAddToCartClick}
-              />
-            </Link>
-          )
-        })}
+        <h1>Your Cart Total:  ${cart.length > 0 ? cartTotal() : '0.00'}</h1>
+        <div className="product">
+          {Object.values(shopItems).map((values) => {
+            return (
+              <Link key={values.id} to={`/shop/${values.id}`}>
+                <SmallProductItem
+                  key={values.id}
+                  product={values}
+                  addToCart={handleAddToCartClick}
+                />
+              </Link>
+            )
+          })}
+        </div>
       </div>
   )
 }

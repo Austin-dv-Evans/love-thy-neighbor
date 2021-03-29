@@ -1,9 +1,19 @@
 .product {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 4rem;
   &__item {
     &-container{
-      width: 15rem;
+      border: 5px solid black;
+      margin: 4rem 4rem 1rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     &-image {
+      margin: 2rem 0 ;
       width: 25rem;
     }
   }
