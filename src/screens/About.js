@@ -1,137 +1,35 @@
 import React from 'react'
 
-import convo2 from '../assets/convo2.jpg'
-import supplies from '../assets/suppliesLTN.jpg'
-import convo1 from '../assets/convo1.jpg'
-import ltnSocks from '../assets/ltnSocks.jpeg'
-import walkingUp from '../assets/walkingUp.jpg'
-import crew from '../assets/crewLTN.jpg'
-import instapost1 from '../assets/instpost1.png'
-import oldBG from '../assets/ltnHomelessPage.jpg'
-import sad from '../assets/ltnSadSleepingFloor.jpg'
-import seeking from '../assets/unsplash-homeless.jpg'
-import box from '../assets/boxOfHelp.jpg'
-import handOut from '../assets/handOut.jpg'
-import handOut2 from '../assets/handout2.jpg'
-import shave from '../assets/shave.jpg'
-
-
-import AboutImage from '../components/AboutImage'
-import AboutTextBubble from '../components/AboutTextBubble'
+import Gallery from '../components/Gallery'
 
 const About = () => {
   return (
     <>
+      <Gallery />
       <div id="about" className="aboutPage__contain">
-        <div className="aboutPage__container--image">
-          <AboutImage image={convo2} />
+        <div className="aboutPage__container--left">
+          <p className="aboutPage__textBubble--heading">The Mission</p>
+          <p className="aboutPage__textBubble--text">
+            Striving to always to do good to one another, to everyone, by
+            serving our brothers and sisters in need.
+          </p>
         </div>
         <div className="aboutPage__container--text">
-          <AboutTextBubble
-            heading="The Mission"
-            text="Striving to always to do good to one another, to everyone, by serving our brothers and sisters in need."
-          />
+          <p className="aboutPage__textBubble--text">
+            With the help of volunteers, we’ve been serving our homeless
+            community weekly.
+          </p>
+          <p className="aboutPage__textBubble--text">
+            Generous local businesses have committed to donating food each week
+            for our volunteers to hand out.
+          </p>
+          <p className="aboutPage__textBubble--text">
+            Love thy Neighbor, Inc. is a registered 501(c)3 non-profit
+            organization. To keep this status we follow strict guidelines and
+            adhere to non-profit rules. This also means that your donation is
+            tax deductible.
+          </p>
         </div>
-      </div>
-      <div className="gallery">
-        <figure className="gallery__item gallery__item--1">
-          <img
-            src={supplies}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--2">
-          <img
-            src={convo1}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--3">
-          <img
-            src={convo2}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--4">
-          <img
-            src={ltnSocks}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--5">
-          <img
-            src={walkingUp}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--6">
-          <img
-            src={crew}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--7">
-          <img
-            src={instapost1}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--8">
-          <img
-            src={oldBG}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--9">
-          <img
-            src={sad}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--10">
-          <img
-            src={seeking}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--11">
-          <img
-            src={handOut2}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--12">
-          <img
-            src={shave}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--13">
-          <img
-            src={handOut}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
-        <figure className="gallery__item gallery__item--14">
-          <img
-            src={box}
-            alt="Conversation with homeless person"
-            className="gallery__image"
-          />
-        </figure>
       </div>
     </>
   )

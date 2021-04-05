@@ -1,9 +1,14 @@
 .aboutPage {
 
   &__contain{
-    background-color: rgb(43, 41, 41);
+    background-image: 
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary ,0.6),
+      rgba(#000, 0.6)
+    ),
+    url('../../../assets/brick.jpg');
     height: 85vh;
-    width: 100vw;
     background-color: rgb(43, 41, 41);
     display: flex;
     justify-content: center;
@@ -12,7 +17,7 @@
       flex-direction: column;
     }
   }
-  &__container--image {
+  &__container--left {
     margin: -10rem 4rem 0rem 4rem;
     @include respond (tab-land) {
       margin-top: 0;
@@ -20,41 +25,21 @@
     
   }
   &__container--text {
+    padding-top: 30rem;
     display: flex;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: -10rem 4rem 0 4rem;
+    overflow: auto;
   }
 
-  &__image {
-    width: 55rem;
-    height: 40rem;
-    border-radius: 20px;
-    @include respond (phone) {
-      margin-top: -5rem;
-    }
-  }
-  &__textBubble--heading{
-    border: 3px solid white;
-    background-color: var(--color-primary);
-    text-align: end;
-    display: flex;
-    height: fit-content;
-    margin: 3rem;
-    padding: 2rem;
-    border-radius: 10px;
-    font-size: 7rem;
-    color: white;
-    text-align: center;
-    font-family: $KidFont;
-    @include respond (tab-land) {
-      margin: 0;
-    }
-  }
+
+
   &__textBubble--text{
     border: 3px solid white;
-    background-color: var(--color-primary);
+    background-color: #000;
     text-align: end;
     display: flex;
     height: fit-content;
@@ -69,10 +54,25 @@
       margin: 0;
     }
   }
+  &__textBubble--heading{
+    border: 3px solid white;
+    background-color: #000;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 7rem;
+    color: white;
+    text-align: center;
+    font-family: $KidFont;
+    @include respond (tab-land) {
+      margin: 0;
+    }
+  }
 }
 
+
 .gallery {
-  height: 85rem;
+  height: 100%;
   background-color: var(--color-primary);
   display: grid;
   grid-template-columns: repeat(8, 1fr);

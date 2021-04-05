@@ -8,11 +8,11 @@ import {loadStripe} from '@stripe/stripe-js';
 import LandingPage from './components/LandingPage'
 import About from './screens/About'
 import Navbar from './components/Navbar'
-import Instagram from './components/Instagram'
 import FindUs from './components/FindUs';
 import Shop from './screens/Shop';
 import PaymentForm from './components/PaymentForm'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Donate from './screens/Donate';
 
 const PUBLIC_KEY = process.env.REACT_APP_KEY
 
@@ -38,6 +38,9 @@ function App() {
           </Route>
           <Route path='/shop'>
             <Shop/>
+          </Route>
+          <Route path='/donate'>
+            <Donate/>
             <PaymentForm />
           </Route>
         </Switch>

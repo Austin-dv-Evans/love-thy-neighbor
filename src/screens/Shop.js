@@ -17,7 +17,7 @@ const Shop = () => {
   return (
     <div className="shop__page">
       <div className="shop__page-heading">
-        <h1>Represent Love Thy Neighbor</h1>
+        <h1>Love Thy Neighbor Merchendise</h1>
       </div>
         <h1>Your Item Count is {cart.length}</h1>
         <h1>Your Cart Total:  ${cart.length > 0 ? cartTotal() : '0.00'}</h1>

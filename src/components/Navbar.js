@@ -39,7 +39,7 @@ const NavbarMain = () => {
           >
             Find Us
           </Link>
-          <Link to="shop" className="nav__navbar--link"
+          <Link to="shop" className="nav__navbar--link--shop"
               onClick={() => openMenu()}>
               Shop
           </Link>

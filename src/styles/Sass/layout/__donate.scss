@@ -1,0 +1,30 @@
+.donate {
+  height: 100vh;
+  background-color: grey;
+  &__heading {
+    color: $color-primary;
+  }
+  &__subheading {
+    color: $color-primary;
+
+  }
+  &__text {
+    font-size: 3rem;
+  }
+  &__consider {
+    color: $color-primary;
+  }
+  &__option {
+    display: flex;
+
+    justify-content: space-around;
+    align-items:flex-start;
+    
+    &-1{
+      padding: 3rem;
+      margin: 3rem;
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+}

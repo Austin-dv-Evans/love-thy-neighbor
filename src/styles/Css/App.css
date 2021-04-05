@@ -7327,14 +7327,11 @@ html {
       font-weight: 700;
       margin-bottom: 2rem;
       text-shadow: 5px 5px #000000;
-      text-align: center;
       padding-bottom: 3rem; }
     .landing__jumbotron-heading2 {
       font-size: 2.5rem;
       text-shadow: 2px 2px #000000;
-      text-align: center;
-      font-family: "Indie Flower", cursive;
-      font-weight: 700; }
+      font-family: "Krub", sans-serif; }
   .landing__container {
     color: white;
     position: absolute;
@@ -7387,6 +7384,9 @@ html {
   z-index: 1;
   overflow: hidden;
   transition: all 2s; }
+  @media only screen and (max-width: 135.5em) {
+    .hero {
+      width: 42%; } }
   @media only screen and (max-width: 112.5em) {
     .hero {
       width: 52%; } }
@@ -7411,8 +7411,7 @@ html {
       width: 75%; } }
   @media only screen and (max-height: 47.5em) {
     .hero {
-      width: 45%;
-      right: 12%; } }
+      width: 45%; } }
   @media only screen and (max-width: 37.5em) {
     .hero {
       width: 75%;
@@ -7484,6 +7483,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-gap: 4rem; }
   .product__item-container {
+    background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
     border: 5px solid black;
     margin: 4rem 4rem 1rem 4rem;
     display: flex;
@@ -7493,6 +7493,21 @@ html {
   .product__item-image {
     margin: 2rem 0;
     width: 25rem; }
+  .product__item-name {
+    color: #fff;
+    font-family: "Indie Flower", cursive;
+    font-size: 2.5rem; }
+  .product__item-price {
+    color: #21d821; }
+
+.view-options {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
 
 .nav {
   background-color: black;
@@ -7520,6 +7535,12 @@ html {
       margin: 0 5rem 0 3rem; }
       .nav__navbar--link:hover {
         color: var(--color-primary); }
+      .nav__navbar--link--shop {
+        font-size: 1.7rem;
+        color: white;
+        margin: 0 5rem 0 3rem; }
+        .nav__navbar--link--shop:hover .dropdown {
+          display: block; }
   .nav__menu--true-hidden {
     z-index: 1;
     display: none; }
@@ -7555,9 +7576,8 @@ html {
       box-shadow: 0px 0px 15px var(--color-primary); }
 
 .aboutPage__contain {
-  background-color: #2b2929;
+  background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
   height: 85vh;
-  width: 100vw;
   background-color: #2b2929;
   display: flex;
   justify-content: center;
@@ -7566,47 +7586,25 @@ html {
     .aboutPage__contain {
       flex-direction: column; } }
 
-.aboutPage__container--image {
+.aboutPage__container--left {
   margin: -10rem 4rem 0rem 4rem; }
   @media only screen and (max-width: 75em) {
-    .aboutPage__container--image {
+    .aboutPage__container--left {
       margin-top: 0; } }
 
 .aboutPage__container--text {
+  padding-top: 30rem;
   display: flex;
+  height: 50vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: -10rem 4rem 0 4rem; }
-
-.aboutPage__image {
-  width: 55rem;
-  height: 40rem;
-  border-radius: 20px; }
-  @media only screen and (max-width: 37.5em) {
-    .aboutPage__image {
-      margin-top: -5rem; } }
-
-.aboutPage__textBubble--heading {
-  border: 3px solid white;
-  background-color: var(--color-primary);
-  text-align: end;
-  display: flex;
-  height: fit-content;
-  margin: 3rem;
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 7rem;
-  color: white;
-  text-align: center;
-  font-family: "Indie Flower", cursive; }
-  @media only screen and (max-width: 75em) {
-    .aboutPage__textBubble--heading {
-      margin: 0; } }
+  margin: -10rem 4rem 0 4rem;
+  overflow: auto; }
 
 .aboutPage__textBubble--text {
   border: 3px solid white;
-  background-color: var(--color-primary);
+  background-color: #000;
   text-align: end;
   display: flex;
   height: fit-content;
@@ -7621,8 +7619,22 @@ html {
     .aboutPage__textBubble--text {
       margin: 0; } }
 
+.aboutPage__textBubble--heading {
+  border: 3px solid white;
+  background-color: #000;
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 7rem;
+  color: white;
+  text-align: center;
+  font-family: "Indie Flower", cursive; }
+  @media only screen and (max-width: 75em) {
+    .aboutPage__textBubble--heading {
+      margin: 0; } }
+
 .gallery {
-  height: 85rem;
+  height: 100%;
   background-color: var(--color-primary);
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -7705,3 +7717,24 @@ html {
     margin-top: 3rem;
     display: flex;
     justify-content: space-around; }
+
+.donate {
+  height: 100vh;
+  background-color: grey; }
+  .donate__heading {
+    color: #651313; }
+  .donate__subheading {
+    color: #651313; }
+  .donate__text {
+    font-size: 3rem; }
+  .donate__consider {
+    color: #651313; }
+  .donate__option {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; }
+    .donate__option-1 {
+      padding: 3rem;
+      margin: 3rem;
+      background-color: #651313;
+      color: white; }

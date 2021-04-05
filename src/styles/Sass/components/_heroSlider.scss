@@ -7,6 +7,9 @@
     z-index: 1;
     overflow: hidden;
     transition: all 2s;
+    @include respond(xl-desktop) {
+        width: 42%
+    }
     @include respond(big-desktop) {
         width: 52%
     }
@@ -31,7 +34,6 @@
     }
     @include respond(short){
       width: 45%;
-      right: 12%;
     }
     @include respond(short and phone){
       width: 75%;
