@@ -25,10 +25,12 @@ function App() {
 
   // useEffect(() => {
   //   fetch(AZ_FUNC)
-  //     .then(result => result.text())
+  //     .then(result => result.json())
   //     .then(resp => console.log(resp))
   //     .catch(err => console.log(err))
   // }, [])
+
+  
 
   return (
     <Elements stripe={stripeTestPromise}>
