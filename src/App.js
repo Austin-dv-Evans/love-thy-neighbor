@@ -13,14 +13,25 @@ import Shop from './screens/Shop';
 import PaymentForm from './components/PaymentForm'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Donate from './screens/Donate';
+import { useEffect } from 'react'
 
 const PUBLIC_KEY = process.env.REACT_APP_KEY
-
+const AZ_FUNC = process.env.REACT_APP_AZ_FUNC
 const stripeTestPromise = loadStripe(PUBLIC_KEY)
 
 
 function App() {
   console.log(stripeTestPromise);
+
+  // useEffect(() => {
+  //   fetch(AZ_FUNC)
+  //     .then(result => result.json())
+  //     .then(resp => console.log(resp))
+  //     .catch(err => console.log(err))
+  // }, [])
+
+  
+
   return (
     <Elements stripe={stripeTestPromise}>
       <div className="App">
