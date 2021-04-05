@@ -5,21 +5,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
   &__instaScroll {
     height: 50rem;
     margin-top: 3rem;
-    background-color: orangered;
+    color: white;
+    background-color: $color-primary;
     overflow-y: scroll;
     background-position: top;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    object-fit: none;
+    object-position: top;
     &--image {
       margin-top: 40rem;
-      height: 40rem;
+      height: 20rem;
     }
   }
 }

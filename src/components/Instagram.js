@@ -1,25 +1,41 @@
 import React, { useState, useEffect } from 'react'
 import InstaPost from './InstaPost'
-
+import Social from '../components/Social'
 function Instagram() {
-    const [ posts, setPosts ] = useState([])
+  const [ posts, setPosts ] = useState([])
+  const AZ_FUNC = process.env.REACT_APP_AZ_FUNC
+  
+  useEffect(() => {
+    fetch(AZ_FUNC)
+      .then((result) => result.json())
+      .then((resp) => setPosts(resp.result.data))
+      .catch((err) => console.log(err))
+  }, [])
 
-    useEffect(() => {
-        fetch('https://graph.instagram.com/17841402917632023/media?fields=id,username,media_url,caption&access_token=IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR')
-            .then(response => response.json())
-            .then(result => setPosts(result.data))
-    }, [])
+  console.log(posts)
 
     const instaFeed = () => {
         return posts.map((post, key) => {
-            return <InstaPost post={post} key={key}/>
+            return (
+              <InstaPost
+                className="findUs__instaScroll--image"
+                post={post}
+                key={key}
+              />
+            )
         })
     }
 
     return (
-        <ul>
-            { instaFeed() }
-        </ul>
+      <ul>
+        <div className="findUs__container">
+          <div className="findUs__instaScroll">
+            
+            {instaFeed()}
+          </div>
+          <Social />
+        </div>
+      </ul>
     )
 }
 
