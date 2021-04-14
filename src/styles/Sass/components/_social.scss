@@ -1,37 +1,47 @@
 .social{
   &__container {
-    position: fixed;
-    top: 94%;
-    left: calc(50% - 9%);
-    width: 18%;
+    // position: fixed;
+    left: 0%;
+    top: 50%;
+    position: absolute;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     z-index: 3;
-    @include respond(big-desktop){
-      top: 94%;
-      left: 15%;
+
+    a {
+      margin-bottom: 3rem;
+    }
+    @include respond(tab-land){
+      left: 50%;
+      top: 75%;
+      flex-direction: row;
+      width: 30rem;
     }
     @include respond(tab-port){
       left: 0%;
       top: 50%;
       flex-direction: column;
+      width: fit-content;
+      margin-left: 1rem;
     }
     @include respond(tiny-phone){
       left: 0%;
-      top: 75%;
+      top: 65%;
+      flex-direction: column;
     }
   }
   &__icon{
     &--logo{
-      transform: translateY(-20px);
+
       color: white;
       width: 7rem;
       z-index: 2;
       @include respond(tab-port){
         transform: translateY(0);
         transform: translateX(3px);
-        margin: 1rem 0;
       }
     }
     &--facebook{
@@ -39,7 +49,7 @@
       z-index: 2;
       opacity: .7;
       @include respond(tab-port){
-        margin-left: 1.8rem;
+        
       }
     }
     &--instagram{
@@ -48,7 +58,7 @@
       opacity: .7;
 
       @include respond(tab-port){
-        margin-left: 1.8rem;
+
       }
     }
   }

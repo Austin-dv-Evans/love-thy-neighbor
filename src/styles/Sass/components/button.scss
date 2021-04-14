@@ -24,3 +24,13 @@
     }
   }
 }
+
+.menu-donate {
+  @include respond(tab-port) {
+    width: 20rem;
+    height: 10rem;
+    margin: 0;
+    background-color: black;
+    border-radius: 8px;
+  }
+}

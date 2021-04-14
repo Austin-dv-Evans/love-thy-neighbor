@@ -7314,6 +7314,7 @@ html {
         top: 6%; } }
   .landing__jumbotron {
     height: 85vh;
+    min-height: 555px;
     background-position: center;
     background-color: #2b2929;
     position: relative;
@@ -7375,6 +7376,14 @@ html {
     box-shadow: 0px 0px 15px var(--color-primary);
     text-shadow: 3px 3px 3px var(--color-primary); }
 
+@media only screen and (max-width: 56.25em) {
+  .menu-donate {
+    width: 20rem;
+    height: 10rem;
+    margin: 0;
+    background-color: black;
+    border-radius: 8px; } }
+
 .hero {
   margin: 2rem 2rem 0 0;
   position: absolute;
@@ -7428,54 +7437,54 @@ html {
     transition-duration: 3s; }
 
 .social__container {
-  position: fixed;
-  top: 94%;
-  left: calc(50% - 9%);
-  width: 18%;
+  left: 0%;
+  top: 50%;
+  position: absolute;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   z-index: 3; }
-  @media only screen and (max-width: 112.5em) {
+  .social__container a {
+    margin-bottom: 3rem; }
+  @media only screen and (max-width: 75em) {
     .social__container {
-      top: 94%;
-      left: 15%; } }
+      left: 50%;
+      top: 75%;
+      flex-direction: row;
+      width: 30rem; } }
   @media only screen and (max-width: 56.25em) {
     .social__container {
       left: 0%;
       top: 50%;
-      flex-direction: column; } }
+      flex-direction: column;
+      width: fit-content;
+      margin-left: 1rem; } }
   @media only screen and (max-width: 30em) {
     .social__container {
       left: 0%;
-      top: 75%; } }
+      top: 65%;
+      flex-direction: column; } }
 
 .social__icon--logo {
-  transform: translateY(-20px);
   color: white;
   width: 7rem;
   z-index: 2; }
   @media only screen and (max-width: 56.25em) {
     .social__icon--logo {
       transform: translateY(0);
-      transform: translateX(3px);
-      margin: 1rem 0; } }
+      transform: translateX(3px); } }
 
 .social__icon--facebook {
   color: white;
   z-index: 2;
   opacity: .7; }
-  @media only screen and (max-width: 56.25em) {
-    .social__icon--facebook {
-      margin-left: 1.8rem; } }
 
 .social__icon--instagram {
   color: white;
   z-index: 2;
   opacity: .7; }
-  @media only screen and (max-width: 56.25em) {
-    .social__icon--instagram {
-      margin-left: 1.8rem; } }
 
 .product {
   width: 100%;
@@ -7527,20 +7536,21 @@ html {
     .nav__navbar--brand {
       height: 13rem;
       width: 20rem;
-      position: absolute;
       top: 0; }
     .nav__navbar--link {
       font-size: 1.7rem;
       color: white;
-      margin: 0 5rem 0 3rem; }
+      margin: 0 5rem 0 3rem;
+      transition: all .3s; }
       .nav__navbar--link:hover {
         color: var(--color-primary); }
-      .nav__navbar--link--shop {
-        font-size: 1.7rem;
-        color: white;
-        margin: 0 5rem 0 3rem; }
-        .nav__navbar--link--shop:hover .dropdown {
-          display: block; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__navbar--link {
+          margin: 3rem;
+          font-size: 3rem; }
+          .nav__navbar--link:hover {
+            color: #000;
+            transform: scale(1.5); } }
   .nav__menu--true-hidden {
     z-index: 1;
     display: none; }
@@ -7556,6 +7566,18 @@ html {
     @media only screen and (max-width: 75em) {
       .nav__menu--false-displayed {
         margin-right: 4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .nav__menu--false-displayed {
+        background-color: #651313;
+        position: absolute;
+        right: -4rem;
+        top: 106%;
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        height: 61vh;
+        justify-content: center;
+        text-align: center; } }
   .nav__menuButton {
     margin: 0 3rem;
     transform: rotate(90deg);
@@ -7577,41 +7599,37 @@ html {
 
 .aboutPage__contain {
   background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
-  height: 85vh;
-  background-color: #2b2929;
+  height: fit-content;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
   @media only screen and (max-width: 75em) {
     .aboutPage__contain {
       flex-direction: column; } }
 
-.aboutPage__container--left {
-  margin: -10rem 4rem 0rem 4rem; }
-  @media only screen and (max-width: 75em) {
-    .aboutPage__container--left {
-      margin-top: 0; } }
+.aboutPage__container {
+  background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
+  display: grid;
+  grid-template-rows: repeat(8, 8vw);
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1.5rem;
+  padding: 1.5rem; }
 
-.aboutPage__container--text {
-  padding-top: 30rem;
-  display: flex;
-  height: 50vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: -10rem 4rem 0 4rem;
-  overflow: auto; }
+.aboutPage__missionContainer {
+  position: absolute;
+  top: 20%;
+  left: 10%; }
 
 .aboutPage__textBubble--text {
   border: 3px solid white;
   background-color: #000;
   text-align: end;
   display: flex;
-  height: fit-content;
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   text-align: center;
   font-family: "Indie Flower", cursive; }
@@ -7621,7 +7639,6 @@ html {
 
 .aboutPage__textBubble--heading {
   border: 3px solid white;
-  background-color: #000;
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
@@ -7633,14 +7650,36 @@ html {
     .aboutPage__textBubble--heading {
       margin: 0; } }
 
+.grid-1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 3; }
+
+.grid-2 {
+  grid-row: 2 / span 2;
+  grid-column: 4/ span 7; }
+
+.grid-3 {
+  grid-row: 4 / span 2;
+  grid-column: 4/ span 7; }
+
+.grid-4 {
+  grid-row: 6 / span 2;
+  grid-column: 4/ span 7; }
+
+.grid-5 {
+  grid-row: 3 / span 4;
+  grid-column: 1 / span 3; }
+
 .gallery {
   height: 100%;
-  background-color: var(--color-primary);
+  background-color: #651313;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 5vw);
   grid-gap: 1.5rem;
-  padding: 1.5rem; }
+  padding: 1.5rem;
+  border-bottom: 13px solid black;
+  border-top: 13px solid black; }
   .gallery__item--1 {
     grid-row: 1 / span 3;
     grid-column: 1 / span 3; }
@@ -7683,29 +7722,52 @@ html {
     object-fit: cover;
     display: block; }
 
-.findUs__container {
-  height: 85vh;
-  background-color: #2b2929;
+.instagram__pageContainer {
+  background-image: linear-gradient(to right bottom, black, white);
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.instagram__section--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center; }
 
-.findUs__instaScroll {
-  height: 50rem;
-  margin-top: 3rem;
+.instagram__heading {
   color: white;
-  background-color: #651313;
-  overflow-y: scroll;
-  background-position: top;
+  font-size: 5rem;
+  margin: 3rem 8rem;
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  text-align: center; }
+
+.instagram__instaPost--container {
+  background-image: url("../../../assets/what-the-hex-dark.png");
+  height: 55rem;
+  padding: 2rem;
+  min-height: fit-content;
+  width: 35rem;
+  border: 10px solid #651313;
+  margin: 4rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  object-fit: none;
-  object-position: top; }
-  .findUs__instaScroll--image {
-    margin-top: 40rem;
-    height: 20rem; }
+  flex-wrap: wrap;
+  overflow: scroll; }
+
+.instagram__instaPost--image {
+  width: 26rem;
+  height: 28rem; }
+
+.instagram__instaPost--caption {
+  color: white;
+  font-size: 2rem;
+  line-break: strict; }
 
 .shop__page {
   display: flex;
@@ -7741,3 +7803,127 @@ html {
       margin: 3rem;
       background-color: #651313;
       color: white; }
+
+.footer {
+  width: 100vw;
+  height: 40rem;
+  background-color: #651313;
+  position: relative; }
+  .footer__logo {
+    width: 58rem;
+    height: 18rem;
+    margin: 0rem -2rem;
+    position: absolute;
+    top: 0;
+    left: 5%; }
+  .footer__text {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    font-family: "Indie Flower", cursive;
+    opacity: .8;
+    margin-bottom: 3rem;
+    position: absolute;
+    bottom: 10%;
+    right: 17%; }
+  .footer__subscribe--container {
+    padding: 2rem 5rem;
+    width: 33%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 7%;
+    left: 11%; }
+  .footer__subscribe--header {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2rem; }
+  .footer__form--input {
+    padding: .7rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%; }
+  .footer__form--submit {
+    text-transform: uppercase;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #651313;
+    transition: all .3s; }
+  .footer__icon--instagram {
+    color: white;
+    z-index: 2;
+    opacity: .7;
+    position: absolute;
+    top: 10%;
+    right: 33%; }
+  .footer__icon--facebook {
+    color: white;
+    z-index: 2;
+    opacity: .7;
+    position: absolute;
+    top: 10%;
+    right: 18%; }
+
+.book__section {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, white, black); }
+
+.book__form {
+  width: 80%;
+  filter: drop-shadow(0px 0px 40px black);
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 30%, rgba(255, 255, 255, 0.4) 57%, transparent 59%), url("../../../assets/brick.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 10%; }
+  .book__form--heading {
+    padding: 2.5rem 0;
+    font-family: "Indie Flower", cursive;
+    font-size: 7rem;
+    font-weight: 700;
+    filter: drop-shadow(10px 10px 20px #651313);
+    color: white;
+    width: fit-content; }
+
+.form {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 100%; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    font-family: "Indie Flower", cursive;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 80%;
+    transition: all 0.3s; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(101, 19, 19, 0.1);
+      border-bottom: 3px solid #651313; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #651313; }
+  .form__submit {
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    padding: 0.7rem 1.7rem;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #651313;
+    transition: all .3s; }
+    .form__submit:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }

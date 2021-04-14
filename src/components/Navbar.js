@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/ltnLogo.jpg'
-import Button from './Button'
+// import Button from './Button'
 
 import { Link } from 'react-router-dom'
 
@@ -22,15 +22,15 @@ const NavbarMain = () => {
             toggle ? "nav__menu--true-hidden" : "nav__menu--false-displayed"
           }
         >
-          <Link to="/donate">
-            <Button />
+          <Link to="/" className="nav__navbar--link" onClick={() => openMenu()}>
+            Home
           </Link>
           <Link
-            to="/"
+            to="/about"
             className="nav__navbar--link"
             onClick={() => openMenu()}
           >
-            Home
+            About
           </Link>
           <Link
             to="/findus"
@@ -39,16 +39,15 @@ const NavbarMain = () => {
           >
             Find Us
           </Link>
-          <Link to="shop" className="nav__navbar--link--shop"
-              onClick={() => openMenu()}>
-              Shop
-          </Link>
           <Link
-            to="/about"
+            to="/contact"
             className="nav__navbar--link"
             onClick={() => openMenu()}
           >
-            About
+            Contact
+          </Link>
+          <Link to="/donate" onClick={() => openMenu()}>
+            <button className="button__donate menu-donate">Donate Today</button>
           </Link>
         </div>
         {toggle && (

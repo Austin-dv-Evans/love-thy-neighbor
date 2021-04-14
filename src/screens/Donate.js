@@ -17,9 +17,9 @@ const Donate = () => {
       </p>
       <h3 className="donate__consider">Consider the Following Options</h3>
       <div className="donate__option">
-        <figure className="donate__option-1">"Cup o' Sugar": $25</figure>
-        <figure className="donate__option-1">"State Farm": $50</figure>
-        <figure className="donate__option-1">"Mr. Rodgers": $100</figure>
+        <figure className="donate__option-1">$25</figure>
+        <figure className="donate__option-1">$50</figure>
+        <figure className="donate__option-1">$100</figure>
         <figure className="donate__option-1">Custom Amount</figure>
       </div>
     </div>

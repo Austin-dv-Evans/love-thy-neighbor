@@ -5,13 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
-import Instagram from './components/Instagram'
+import Instagram from './screens/Instagram'
 import LandingPage from './components/LandingPage'
 import About from './screens/About'
 import Navbar from './components/Navbar'
-import FindUs from './components/FindUs';
-import Shop from './screens/Shop';
+import Contact from './screens/Contact'
+
 import PaymentForm from './components/PaymentForm'
+import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Donate from './screens/Donate';
 
@@ -38,14 +39,15 @@ function App() {
           <Route path='/findus'>
             <Instagram/>
           </Route>
-          <Route path='/shop'>
-            <Shop/>
+          <Route path='/contact'>
+            <Contact/>
           </Route>
           <Route path='/donate'>
             <Donate/>
             <PaymentForm />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
     </Elements>

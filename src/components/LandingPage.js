@@ -16,8 +16,8 @@ const LandingPage = () => {
             Together we can create hope <br/> where hope has been lost.
           </h6>
         </div>
+        <Social/>
       </div>
-      <Social/>
       </>
     )
 }
