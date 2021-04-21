@@ -1,0 +1,14 @@
+.ourPartners {
+
+  &__container{
+    height: 60rem;
+    width: 100%;
+    background-color:rgba($color: $color-primary-dark, $alpha: .6)
+  }
+  &__heading {
+    font-size: 13rem;
+    font-weight: 600;
+    font-family: $KidFont;
+    color: white;
+  }
+}

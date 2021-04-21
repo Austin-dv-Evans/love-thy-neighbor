@@ -7518,12 +7518,45 @@ html {
   font-size: 1.5rem;
   margin-bottom: 1rem; }
 
+.ourPartners__container {
+  height: 60rem;
+  width: 100%;
+  background-color: rgba(70, 13, 13, 0.6); }
+
+.ourPartners__heading {
+  font-size: 13rem;
+  font-weight: 600;
+  font-family: "Indie Flower", cursive;
+  color: white; }
+
+.customModal {
+  height: 500px;
+  width: 60%;
+  background-color: #e83e8c;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 18%;
+  right: calc(70% - 500px);
+  z-index: 10; }
+  .customModal__body {
+    height: 40px;
+    width: 100%; }
+  .customModal__close {
+    color: red;
+    padding: 1rem;
+    margin-left: calc(100% - 4rem);
+    height: 4rem;
+    width: 4rem;
+    text-align: center; }
+
 .nav {
   background-color: black;
   position: relative;
   z-index: 10;
   display: flex;
   align-items: center;
+  font-family: "Indie Flower", cursive;
   justify-content: center;
   box-shadow: 0px 3px 10px var(--color-primary); }
   .nav__navbar {
@@ -7538,7 +7571,7 @@ html {
       width: 20rem;
       top: 0; }
     .nav__navbar--link {
-      font-size: 1.7rem;
+      font-size: 2.7rem;
       color: white;
       margin: 0 5rem 0 3rem;
       transition: all .3s; }
@@ -7611,7 +7644,7 @@ html {
 .aboutPage__container {
   background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
   display: grid;
-  grid-template-rows: repeat(8, 8vw);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 1.5rem;
   padding: 1.5rem; }
@@ -7623,16 +7656,17 @@ html {
 
 .aboutPage__textBubble--text {
   border: 3px solid white;
-  background-color: #000;
-  text-align: end;
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
   font-size: 2.5rem;
+  font-family: "Indie Flower", cursive;
   color: white;
-  text-align: center;
-  font-family: "Indie Flower", cursive; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
   @media only screen and (max-width: 75em) {
     .aboutPage__textBubble--text {
       margin: 0; } }
@@ -7651,24 +7685,24 @@ html {
       margin: 0; } }
 
 .grid-1 {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 1;
   grid-column: 1 / span 3; }
 
 .grid-2 {
-  grid-row: 2 / span 2;
-  grid-column: 4/ span 7; }
+  grid-row: 1 / span 1;
+  grid-column: 4 / span 4; }
 
 .grid-3 {
-  grid-row: 4 / span 2;
-  grid-column: 4/ span 7; }
+  grid-row: 2 / span 2;
+  grid-column: 3/ span 2; }
 
 .grid-4 {
-  grid-row: 6 / span 2;
-  grid-column: 4/ span 7; }
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 2; }
 
 .grid-5 {
-  grid-row: 3 / span 4;
-  grid-column: 1 / span 3; }
+  grid-row: 2 / span 2;
+  grid-column: 5 / span 3; }
 
 .gallery {
   height: 100%;
@@ -7723,8 +7757,9 @@ html {
     display: block; }
 
 .instagram__pageContainer {
-  background-image: linear-gradient(to right bottom, black, white);
+  background-image: linear-gradient(to top left, white, black);
   height: fit-content;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -7784,25 +7819,150 @@ html {
     justify-content: space-around; }
 
 .donate {
-  height: 100vh;
-  background-color: grey; }
+  background-image: linear-gradient(to top left, white, black);
+  height: fit-content; }
+  .donate__pageContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5rem; }
   .donate__heading {
-    color: #651313; }
+    padding: 2rem;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-size: 7rem;
+    font-weight: 700;
+    filter: drop-shadow(10px 10px 20px #651313);
+    color: white; }
+  .donate__donationInfo {
+    background-color: grey;
+    height: 67rem;
+    width: 50rem;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 6px 20px #651313;
+    border-radius: 5px;
+    border: 5px outset #460d0d; }
+    .donate__donationInfo-details {
+      height: 100%;
+      margin: 4rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+  .donate__donationSelections {
+    background-color: grey;
+    height: 67rem;
+    width: 50rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 6px 20px #651313;
+    border-radius: 5px;
+    border: 5px outset #460d0d; }
   .donate__subheading {
-    color: #651313; }
+    color: #651313;
+    margin: 2rem 2rem 0 2rem;
+    font-family: "Krub", sans-serif;
+    font-weight: bold;
+    font-size: 3rem; }
   .donate__text {
     font-size: 3rem; }
   .donate__consider {
-    color: #651313; }
+    color: #651313;
+    font-size: 3rem;
+    margin: 4rem 2rem 2rem 2rem;
+    text-align: center;
+    font-family: "Krub", sans-serif;
+    font-weight: bold; }
   .donate__option {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start; }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
     .donate__option-1 {
-      padding: 3rem;
-      margin: 3rem;
+      margin: 1rem;
       background-color: #651313;
-      color: white; }
+      color: white;
+      text-align: center;
+      font-size: 2.75rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 81px; }
+    .donate__option-active {
+      margin: 1rem;
+      background-color: #651313;
+      color: white;
+      text-align: center;
+      font-size: 2.75rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 81px;
+      border: 8px outset #460d0d; }
+  .donate__option-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem 2rem 2rem; }
+  .donate__button {
+    width: 100%;
+    height: 5rem;
+    font-size: 3rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 2rem;
+    border-color: var(--color-primary);
+    border-radius: 4px;
+    font-weight: 400;
+    text-shadow: 1px 1px #000000;
+    border-width: 3px; }
+
+#custom {
+  width: 80px;
+  height: 30px;
+  margin-bottom: .8rem; }
+
+#hiddenName {
+  margin-right: 2rem; }
+
+#coverFees {
+  margin-right: 2rem; }
+
+.frequencySelection {
+  font-size: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column; }
+
+.coverFeesCheck {
+  font-size: 1.5rem;
+  margin: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  border: 5px solid #651313;
+  padding: 1rem; }
+
+.anonomysCheck {
+  font-size: 1.5rem;
+  margin: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 5px solid #651313;
+  padding: 1rem; }
+
+.leaveNote {
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center; }
 
 .footer {
   width: 100vw;
@@ -7870,7 +8030,7 @@ html {
 
 .book__section {
   padding: 10rem 0;
-  background-image: linear-gradient(to right bottom, white, black); }
+  background-image: linear-gradient(to top left, white, black); }
 
 .book__form {
   width: 80%;

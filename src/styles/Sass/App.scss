@@ -1,20 +1,24 @@
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+// mixins
 @import '../Sass/abstracts/mixins';
 @import '../Sass/abstracts/animations';
 @import '../Sass/abstracts/variables';
 
+// base
 @import '../Sass/base/_base';
 
-
+// components
 @import '../Sass/components/landingPage';
 @import '../Sass/components/button';
 @import '../Sass/components/heroSlider';
 @import '../Sass/components/social';
 @import '../Sass/components/product';
+@import '../Sass/components/ourPartners';
+@import '../Sass/components/modal';
 
-
+// layouts
 @import '../Sass/layout/__nav';
 @import '../Sass/layout/about';
 @import '../Sass/layout/_findUs';

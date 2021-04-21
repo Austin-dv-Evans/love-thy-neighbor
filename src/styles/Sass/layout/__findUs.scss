@@ -1,7 +1,12 @@
 .instagram {
   &__pageContainer {
-    background-image: linear-gradient(to right bottom, black, white);
+    background-image: linear-gradient(
+      to top left,
+      white,
+      black
+    );
     height: fit-content;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

@@ -44,7 +44,7 @@ function App() {
           </Route>
           <Route path='/donate'>
             <Donate/>
-            <PaymentForm />
+            
           </Route>
         </Switch>
         <Footer />

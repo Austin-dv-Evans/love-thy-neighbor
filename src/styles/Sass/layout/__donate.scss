@@ -1,30 +1,176 @@
 .donate {
-  height: 100vh;
-  background-color: grey;
+  background-image: linear-gradient(
+      to top left,
+      white,
+      black
+    );
+    height: fit-content;
+  &__pageContainer{
+    height: 100vh;
+  
+    display: flex;
+    justify-content: space-around; 
+    padding-bottom: 5rem;
+  }
+  
   &__heading {
-    color: $color-primary;
+    // color: $color-primary;
+    padding: 2rem;
+    text-align: center;
+    font-family: $KidFont;
+    font-size: 7rem;
+    font-weight: 700;
+    filter: drop-shadow(10px 10px 20px $color-primary);
+    color: white;
+  }
+
+  &__donationInfo{
+    background-color: grey;
+    height: 67rem;
+    width: 50rem;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 6px 20px $color-primary;
+    border-radius: 5px;
+    border: 5px outset $color-primary-dark;
+
+    &-details {
+      height: 100%;
+      margin: 4rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__donationSelections{
+    background-color: grey;
+    height: 67rem;
+    width: 50rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 6px 20px $color-primary;
+    border-radius: 5px;
+    border: 5px outset $color-primary-dark;
   }
   &__subheading {
     color: $color-primary;
-
+    margin: 2rem 2rem 0 2rem;
+    font-family: $Krubfont;
+    font-weight: bold;
+    font-size: 3rem;
   }
   &__text {
     font-size: 3rem;
   }
+
   &__consider {
     color: $color-primary;
+    font-size: 3rem;
+    margin: 4rem 2rem 2rem 2rem;
+    text-align: center;
+    font-family: $Krubfont;
+    font-weight: bold;
   }
   &__option {
-    display: flex;
-
-    justify-content: space-around;
-    align-items:flex-start;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     &-1{
-      padding: 3rem;
-      margin: 3rem;
+      margin: 1rem;
       background-color: $color-primary;
       color: white;
+      text-align: center;
+      font-size: 2.75rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 81px;
+    }
+    &-active{
+      margin: 1rem;
+      background-color: $color-primary;
+      color: white;
+      text-align: center;
+      font-size: 2.75rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 81px;
+      border: 8px outset $color-primary-dark;
     }
   }
+  &__option-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem 2rem 2rem;
+    
+  }
+  &__button {
+    width: 100%;
+    height: 5rem;
+    font-size: 3rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 2rem;
+    border-color: var(--color-primary);
+    border-radius: 4px;
+    font-weight: 400;
+    text-shadow: 1px 1px #000000 ;
+    border-width: 3px;
+  }
+}
+
+
+
+#custom{
+  width: 80px;
+  height: 30px;
+  margin-bottom: .8rem;
+}
+#coverFeesLabel{
+
+}
+#hiddenName {
+  margin-right: 2rem;
+}
+#coverFees{
+  margin-right: 2rem;
+}
+.frequencySelection{
+  font-size: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.coverFeesCheck{
+  font-size: 1.5rem;
+  margin: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  border: 5px solid $color-primary;
+  padding: 1rem;
+}
+.anonomysCheck{
+  font-size: 1.5rem;
+  margin: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 5px solid $color-primary;
+  padding: 1rem;
+}
+.leaveNote{
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
