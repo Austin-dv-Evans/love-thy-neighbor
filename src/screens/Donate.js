@@ -1,4 +1,5 @@
 import React from 'react'
+import PaymentForm from '../components/PaymentForm'
 
 const Donate = () => {
   return (
@@ -22,6 +23,8 @@ const Donate = () => {
         <figure className="donate__option-1">"Mr. Rodgers": $100</figure>
         <figure className="donate__option-1">Custom Amount</figure>
       </div>
+
+      <PaymentForm />
     </div>
   )
 }

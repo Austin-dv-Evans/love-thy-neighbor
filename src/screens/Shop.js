@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { shopItems } from "../assets/data"
 import SmallProductItem from "../components/SmallProductItem"
 import { Link } from 'react-router-dom'
+import PaymentForm from '../components/PaymentForm'
 const Shop = () => {
   const [cart, setCart] = useState([])
 
@@ -34,6 +35,7 @@ const Shop = () => {
             )
           })}
         </div>
+          <PaymentForm /> 
       </div>
   )
 }
