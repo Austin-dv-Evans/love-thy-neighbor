@@ -11,6 +11,7 @@ const Donate = () => {
 
   const [paymentOpen, setPaymentOpen] = useState(false)
   const [selectedAmount, setSelectedAmount] = useState(0)
+
   console.log(selectedAmount)
   return (
     <div className="donate">
@@ -71,7 +72,7 @@ const Donate = () => {
             </figure>
             <figure
               className={
-                selectedAmount === 0 || 10 || 25 || 50 || 75 || 100
+                selectedAmount === 0 || selectedAmount === 10 || selectedAmount === 25 || selectedAmount === 50 || selectedAmount === 75 || selectedAmount === 100
                   ? "donate__option-1"
                   : "donate__option-active"
               }
