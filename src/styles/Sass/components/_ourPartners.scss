@@ -3,7 +3,13 @@
   &__container{
     height: 60rem;
     width: 100%;
-    background-color:rgba($color: $color-primary-dark, $alpha: .6)
+    background-image: 
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary ,0.6),
+      rgba(#000, 0.6)
+    ),
+    url('../../../assets/brick.jpg');
   }
   &__heading {
     font-size: 13rem;

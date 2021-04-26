@@ -19,7 +19,6 @@
         &--brand{
             height: 13rem;
             width: 20rem;
-
             top: 0;
         }
         &--link{
@@ -27,7 +26,6 @@
           color:white;
           margin: 0 5rem 0 3rem;
           transition: all .3s;
-          
           &:hover{
             color:var(--color-primary);
           }
@@ -47,7 +45,7 @@
     }
     &__menu--false-displayed{
       z-index: 1;
-      margin-right: 8rem;
+      // margin-right: 8rem;
       padding: 2rem;
       border-radius: 10px;
       animation-name: moveInLeft;
@@ -55,7 +53,7 @@
       animation-duration: .5s;
       animation-timing-function: ease-out;
       @include respond(tab-land){
-        margin-right: 4rem;
+        // margin-right: 4rem;
       }
       @include respond(tab-port){
         background-color: $color-primary;
@@ -71,6 +69,7 @@
       }
     }
     &__menuButton{
+      display: none;
       margin: 0 3rem;
       transform: rotate(90deg);
       background-color: transparent;

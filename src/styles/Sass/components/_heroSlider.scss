@@ -1,58 +1,65 @@
 .hero{
     margin: 2rem 2rem 0 0;
-    position: absolute;
     background-color: rgb(43, 41, 41);
-    right: 0;
-    top: 5%;
+    width: 60%;
     z-index: 1;
-    overflow: hidden;
-    transition: all 2s;
+    margin-top: -13rem;
+    // transition: all 2s;
     @include respond(xl-desktop) {
-        width: 42%
+
     }
     @include respond(big-desktop) {
-        width: 52%
+
     }
     @include respond(tab-land) {
-        right: 6%;
-        top: 8%;
+  
     }
     @include respond(tab-port){
-      width: 60%;
-      right: 19%;
-      top: 20%;
+
     }
     @include respond(phone){
-      width: 68%;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
     }
     @include respond(tiny-phone){
-      width: 75%;
+
     }
     @include respond(short){
-      width: 45%;
+
     }
     @include respond(short and phone){
-      width: 75%;
-      right: 12%;
+
     }
     
     &__image {
       width: 100%;
-      
     }
     &__slide{
       opacity: 0;
-      transition-duration: 3s ease ;
+      transition-duration: 3s ;
       animation-duration: 3s;
     }
     &__slide--active{
       opacity: 1;
       transition: transform opacity;
       transition-duration: 3s;
+    }
+    &__caption {
+      opacity: 0;
+      transition-duration: 3s ;
+      animation-duration: 3s;
+    }
+    &__caption-active {
+      opacity: 1;
+      transition: transform opacity;
+      transition-duration: 3s;
+    }
+    &__caption--text {
+      z-index: 15;
+      color: $color-white;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 1rem;
+      font-family: $Krubfont;
     }
 }
 // {"access_token": "IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR", 

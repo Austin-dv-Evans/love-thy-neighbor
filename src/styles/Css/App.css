@@ -7293,71 +7293,43 @@ html {
     html {
       font-size: 45%; } }
 
-.landing {
-  overflow: hidden; }
-  .landing__nameLogo {
-    width: 58%;
-    position: absolute;
-    top: 3%;
-    left: -3%;
-    z-index: 2;
-    transform: rotate(-3deg);
-    filter: drop-shadow(0px 2px 10px black); }
-    @media only screen and (max-width: 56.25em) {
-      .landing__nameLogo {
-        left: 21%;
-        top: 2%; } }
-    @media only screen and (max-width: 37.5em) {
-      .landing__nameLogo {
-        width: 100%;
-        left: 0;
-        top: 6%; } }
-  .landing__jumbotron {
-    height: 85vh;
-    min-height: 555px;
-    background-position: center;
-    background-color: #2b2929;
-    position: relative;
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .landing__jumbotron-heading1 {
-      font-size: 6rem;
-      font-family: "Krub", sans-serif;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      text-shadow: 5px 5px #000000;
-      padding-bottom: 3rem; }
-    .landing__jumbotron-heading2 {
-      font-size: 2.5rem;
-      text-shadow: 2px 2px #000000;
-      font-family: "Krub", sans-serif; }
-  .landing__container {
-    color: white;
-    position: absolute;
-    z-index: 2;
-    top: 60%;
-    left: 22%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 31%;
-    padding: 6rem 4rem;
-    border-radius: 2px;
-    background-color: black; }
-    @media only screen and (max-width: 56.25em) {
-      .landing__container {
-        width: 60%;
-        top: 77%;
-        left: 48.5%;
-        padding: 1rem 4rem;
-        margin-top: 4.5rem;
-        transform: translate(-50%, -50%) rotate(2deg); } }
+.landing__nameLogo {
+  width: 58%;
+  z-index: 2;
+  transform: rotate(-5deg) translateX(-45%) translateY(-10%);
+  filter: drop-shadow(0px 2px 10px black); }
+
+.landing__jumbotron {
+  height: 100vh;
+  background-color: #2b2929;
+  position: relative;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .landing__jumbotron-heading1 {
+    font-size: 6rem;
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 5px 5px #000000;
+    padding-bottom: 3rem; }
+  .landing__jumbotron-heading2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #000000;
+    font-family: "Krub", sans-serif; }
+
+.landing__container {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+  width: fit-content;
+  padding: 6rem 4rem;
+  background-color: rgba(13, 12, 12, 0.3); }
 
 .button__donate {
-  background-color: transparent;
+  background-color: white;
   width: 14rem;
   height: 6rem;
   color: var(--color-primary);
@@ -7372,7 +7344,7 @@ html {
   .button__donate:hover {
     transform: scale(1.1);
     font-weight: 700;
-    color: white;
+    color: black;
     box-shadow: 0px 0px 15px var(--color-primary);
     text-shadow: 3px 3px 3px var(--color-primary); }
 
@@ -7386,55 +7358,35 @@ html {
 
 .hero {
   margin: 2rem 2rem 0 0;
-  position: absolute;
   background-color: #2b2929;
-  right: 0;
-  top: 5%;
+  width: 60%;
   z-index: 1;
-  overflow: hidden;
-  transition: all 2s; }
-  @media only screen and (max-width: 135.5em) {
-    .hero {
-      width: 42%; } }
-  @media only screen and (max-width: 112.5em) {
-    .hero {
-      width: 52%; } }
-  @media only screen and (max-width: 75em) {
-    .hero {
-      right: 6%;
-      top: 8%; } }
-  @media only screen and (max-width: 56.25em) {
-    .hero {
-      width: 60%;
-      right: 19%;
-      top: 20%; } }
-  @media only screen and (max-width: 37.5em) {
-    .hero {
-      width: 68%;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%); } }
-  @media only screen and (max-width: 30em) {
-    .hero {
-      width: 75%; } }
-  @media only screen and (max-height: 47.5em) {
-    .hero {
-      width: 45%; } }
-  @media only screen and (max-width: 37.5em) {
-    .hero {
-      width: 75%;
-      right: 12%; } }
+  margin-top: -13rem; }
   .hero__image {
     width: 100%; }
   .hero__slide {
     opacity: 0;
-    transition-duration: 3s ease;
+    transition-duration: 3s;
     animation-duration: 3s; }
   .hero__slide--active {
     opacity: 1;
     transition: transform opacity;
     transition-duration: 3s; }
+  .hero__caption {
+    opacity: 0;
+    transition-duration: 3s;
+    animation-duration: 3s; }
+  .hero__caption-active {
+    opacity: 1;
+    transition: transform opacity;
+    transition-duration: 3s; }
+  .hero__caption--text {
+    z-index: 15;
+    color: #FEFEFE;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Krub", sans-serif; }
 
 .social__container {
   left: 0%;
@@ -7492,7 +7444,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-gap: 4rem; }
   .product__item-container {
-    background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
+    background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
     border: 5px solid black;
     margin: 4rem 4rem 1rem 4rem;
     display: flex;
@@ -7521,7 +7473,7 @@ html {
 .ourPartners__container {
   height: 60rem;
   width: 100%;
-  background-color: rgba(70, 13, 13, 0.6); }
+  background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg"); }
 
 .ourPartners__heading {
   font-size: 13rem;
@@ -7589,19 +7541,15 @@ html {
     display: none; }
   .nav__menu--false-displayed {
     z-index: 1;
-    margin-right: 8rem;
     padding: 2rem;
     border-radius: 10px;
     animation-name: moveInLeft;
     background-color: rgba(0, 0, 0, 0.4);
     animation-duration: .5s;
     animation-timing-function: ease-out; }
-    @media only screen and (max-width: 75em) {
-      .nav__menu--false-displayed {
-        margin-right: 4rem; } }
     @media only screen and (max-width: 56.25em) {
       .nav__menu--false-displayed {
-        background-color: #651313;
+        background-color: #931313;
         position: absolute;
         right: -4rem;
         top: 106%;
@@ -7612,6 +7560,7 @@ html {
         justify-content: center;
         text-align: center; } }
   .nav__menuButton {
+    display: none;
     margin: 0 3rem;
     transform: rotate(90deg);
     background-color: transparent;
@@ -7631,7 +7580,7 @@ html {
       box-shadow: 0px 0px 15px var(--color-primary); }
 
 .aboutPage__contain {
-  background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
+  background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -7642,7 +7591,7 @@ html {
       flex-direction: column; } }
 
 .aboutPage__container {
-  background-image: linear-gradient(to right bottom, rgba(101, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
+  background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(0, 0, 0, 0.6)), url("../../../assets/brick.jpg");
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(7, 1fr);
@@ -7656,13 +7605,13 @@ html {
 
 .aboutPage__textBubble--text {
   border: 3px solid white;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
   font-size: 2.5rem;
   font-family: "Indie Flower", cursive;
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7706,14 +7655,12 @@ html {
 
 .gallery {
   height: 100%;
-  background-color: #651313;
+  background-color: #931313;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 5vw);
   grid-gap: 1.5rem;
-  padding: 1.5rem;
-  border-bottom: 13px solid black;
-  border-top: 13px solid black; }
+  padding: 1.5rem; }
   .gallery__item--1 {
     grid-row: 1 / span 3;
     grid-column: 1 / span 3; }
@@ -7786,7 +7733,7 @@ html {
   padding: 2rem;
   min-height: fit-content;
   width: 35rem;
-  border: 10px solid #651313;
+  border: 10px solid #931313;
   margin: 4rem;
   display: flex;
   flex-direction: row;
@@ -7819,7 +7766,7 @@ html {
     justify-content: space-around; }
 
 .donate {
-  background-image: linear-gradient(to top left, white, black);
+  background-image: url("../../../assets/dark-honeycomb 2.png");
   height: fit-content; }
   .donate__pageContainer {
     height: 100vh;
@@ -7832,10 +7779,10 @@ html {
     font-family: "Indie Flower", cursive;
     font-size: 7rem;
     font-weight: 700;
-    filter: drop-shadow(10px 10px 20px #651313);
+    filter: drop-shadow(10px 10px 20px #931313);
     color: white; }
   .donate__donationInfo {
-    background-color: grey;
+    background-color: #f5f5f5;
     height: 67rem;
     width: 50rem;
     margin: 1rem;
@@ -7843,9 +7790,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 6px 20px #651313;
-    border-radius: 5px;
-    border: 5px outset #460d0d; }
+    border-radius: 25px; }
     .donate__donationInfo-details {
       height: 100%;
       margin: 4rem 0;
@@ -7853,7 +7798,7 @@ html {
       flex-direction: column;
       justify-content: space-between; }
   .donate__donationSelections {
-    background-color: grey;
+    background-color: #f5f5f5;
     height: 67rem;
     width: 50rem;
     margin: 1rem;
@@ -7861,11 +7806,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 3px 6px 20px #651313;
-    border-radius: 5px;
-    border: 5px outset #460d0d; }
+    border-radius: 25px; }
   .donate__subheading {
-    color: #651313;
+    color: #931313;
     margin: 2rem 2rem 0 2rem;
     font-family: "Krub", sans-serif;
     font-weight: bold;
@@ -7873,7 +7816,7 @@ html {
   .donate__text {
     font-size: 3rem; }
   .donate__consider {
-    color: #651313;
+    color: #931313;
     font-size: 3rem;
     margin: 4rem 2rem 2rem 2rem;
     text-align: center;
@@ -7884,27 +7827,29 @@ html {
     grid-template-columns: repeat(3, 1fr); }
     .donate__option-1 {
       margin: 1rem;
-      background-color: #651313;
+      background-color: white;
+      color: black;
+      text-align: center;
+      font-size: 2.75rem;
+      display: flex;
+      border-radius: 15px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 81px;
+      border: 1px solid black; }
+    .donate__option-active {
+      margin: 1rem;
+      background-color: #931313;
       color: white;
       text-align: center;
+      border-radius: 15px;
       font-size: 2.75rem;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
       min-height: 81px; }
-    .donate__option-active {
-      margin: 1rem;
-      background-color: #651313;
-      color: white;
-      text-align: center;
-      font-size: 2.75rem;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 81px;
-      border: 8px outset #460d0d; }
   .donate__option-2 {
     display: flex;
     flex-direction: column;
@@ -7912,12 +7857,13 @@ html {
   .donate__button {
     width: 100%;
     height: 5rem;
-    font-size: 3rem;
-    color: var(--color-primary);
+    font-size: 3rem !important;
+    color: white;
     font-weight: bold;
     font-size: 2rem;
-    border-color: var(--color-primary);
-    border-radius: 4px;
+    border-color: #931313;
+    background-color: #931313;
+    border-radius: 14px;
     font-weight: 400;
     text-shadow: 1px 1px #000000;
     border-width: 3px; }
@@ -7946,8 +7892,10 @@ html {
   align-items: center;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  border: 5px solid #651313;
-  padding: 1rem; }
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: white; }
 
 .anonomysCheck {
   font-size: 1.5rem;
@@ -7955,8 +7903,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border: 5px solid #651313;
-  padding: 1rem; }
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 20px; }
 
 .leaveNote {
   font-size: 2rem;
@@ -7967,7 +7917,7 @@ html {
 .footer {
   width: 100vw;
   height: 40rem;
-  background-color: #651313;
+  background-color: #931313;
   position: relative; }
   .footer__logo {
     width: 58rem;
@@ -8011,7 +7961,7 @@ html {
     font-weight: 600;
     border: none;
     cursor: pointer;
-    color: #651313;
+    color: #931313;
     transition: all .3s; }
   .footer__icon--instagram {
     color: white;
@@ -8045,7 +7995,7 @@ html {
     font-family: "Indie Flower", cursive;
     font-size: 7rem;
     font-weight: 700;
-    filter: drop-shadow(10px 10px 20px #651313);
+    filter: drop-shadow(10px 10px 20px #931313);
     color: white;
     width: fit-content; }
 
@@ -8069,10 +8019,10 @@ html {
     transition: all 0.3s; }
     .form__input:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(101, 19, 19, 0.1);
-      border-bottom: 3px solid #651313; }
+      box-shadow: 0 1rem 2rem rgba(147, 19, 19, 0.1);
+      border-bottom: 3px solid #931313; }
     .form__input:focus:invalid {
-      border-bottom: 3px solid #651313; }
+      border-bottom: 3px solid #931313; }
   .form__submit {
     margin-bottom: 5rem;
     text-transform: uppercase;
@@ -8082,7 +8032,7 @@ html {
     font-weight: 600;
     border: none;
     cursor: pointer;
-    color: #651313;
+    color: #931313;
     transition: all .3s; }
     .form__submit:hover {
       transform: translateY(-2px) scale(1.05);

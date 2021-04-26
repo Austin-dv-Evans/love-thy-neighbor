@@ -11,6 +11,9 @@ const Donate = () => {
 
   const [paymentOpen, setPaymentOpen] = useState(false)
   const [selectedAmount, setSelectedAmount] = useState(0)
+
+  const options = [10, 25, 50, 75, 100]
+  
   console.log(selectedAmount)
   return (
     <div className="donate">
@@ -71,32 +74,29 @@ const Donate = () => {
             </figure>
             <figure
               className={
-                selectedAmount === 0 || 10 || 25 || 50 || 75 || 100
-                  ? "donate__option-1"
-                  : "donate__option-active"
+                selectedAmount !== 10 || selectedAmount !== 25 || selectedAmount !== 50 || selectedAmount !==  75 || selectedAmount !==  100
+                  ? "donate__option-active"
+                  : "donate__option-1"
               }
             >
-              <label htmlFor="custom">Custom</label>
+              <label htmlFor="custom"></label>
               <input
                 type="number"
                 name="custom"
                 id="custom"
                 min="0"
                 onChange={(e) => setSelectedAmount(e.target.value)}
+                onClick={() => console.log(selectedAmount)}
               />
             </figure>
           </div>
           <div className="donate__option-2">
             <div className="coverFeesCheck">
               <label htmlFor="coverFees" id="coverFeesLabel">
-                I would like to cover the 3% transaction fees so LTN recieves my
+                I would like to cover the 3% transaction fees so Love Thy Neighbor recieves my
                 amount in full.
               </label>
               <input type="checkbox" name="coverFees" id="coverFees" />
-            </div>
-            <div className="anonomysCheck">
-              <input type="checkbox" name="hiddenName" id="hiddenName" />
-              <label htmlFor="hiddenName">Keep My Donation Anonomys</label>
             </div>
             <div className="leaveNote">
               <textarea
