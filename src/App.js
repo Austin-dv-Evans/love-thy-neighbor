@@ -10,8 +10,9 @@ import LandingPage from './components/LandingPage'
 import About from './screens/About'
 import Navbar from './components/Navbar'
 import Contact from './screens/Contact'
+import Shop from './screens/Shop'
 
-import PaymentForm from './components/PaymentForm'
+
 import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Donate from './screens/Donate';
@@ -44,6 +45,10 @@ function App() {
           </Route>
           <Route path='/donate'>
             <Donate/>
+            
+          </Route>
+          <Route path='/shop'>
+            <Shop />
             
           </Route>
         </Switch>

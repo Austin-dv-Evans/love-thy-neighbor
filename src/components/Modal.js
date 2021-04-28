@@ -1,4 +1,5 @@
 import React from 'react'
+import PaymentForm from './PaymentForm'
 
 const Modal = () => {
   return (
@@ -9,7 +10,7 @@ const Modal = () => {
         </h1>
       </div>
       <div className="modal__body">
-        
+        <PaymentForm />
       </div>
     </div>
   )

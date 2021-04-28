@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import { shopItems } from "../assets/data"
+// import { shopItems } from "../assets/data"
 import SmallProductItem from "../components/SmallProductItem"
+import PaymentForm from '../components/PaymentForm'
 import { Link } from 'react-router-dom'
 const Shop = () => {
   const [cart, setCart] = useState([])
@@ -22,7 +23,7 @@ const Shop = () => {
         <h1>Your Item Count is {cart.length}</h1>
         <h1>Your Cart Total:  ${cart.length > 0 ? cartTotal() : '0.00'}</h1>
         <div className="product">
-          {Object.values(shopItems).map((values) => {
+          {/* {Object.values(shopItems).map((values) => {
             return (
               <Link key={values.id} to={`/shop/${values.id}`}>
                 <SmallProductItem
@@ -32,8 +33,9 @@ const Shop = () => {
                 />
               </Link>
             )
-          })}
+          })} */}
         </div>
+        <PaymentForm />
       </div>
   )
 }
