@@ -154,7 +154,7 @@ const Donate = () => {
               </div>
               <div className="customModal__body">
                 <h2>Credit Card Info</h2>
-                <PaymentForm />
+                <PaymentForm amount={ selectedAmount } />
               </div>
             </div>
           </Elements>
