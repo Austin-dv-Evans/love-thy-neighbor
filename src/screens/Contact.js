@@ -60,7 +60,7 @@ const Contact = () => {
               onChange={(e) => setInfo(e.target.value)}
               cols="30"
               rows="10"
-              placeholder="Any Additional Information You Would Like Us to Know (optional)"
+              placeholder="Your Message Here"
               id="message"
               className="form__input"
               name="message"

@@ -28,7 +28,7 @@ const Instagram = () => {
   return (
     <div className="instagram__pageContainer">
       <h1 className="instagram__heading">
-        Keep Up With Everything We Do For The Community and Follow Us on Instagram
+        Keep Up With Everything We Do For The Community
       </h1>
       <div className="instagram__section--container">
         {instaFeed()}

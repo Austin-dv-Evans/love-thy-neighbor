@@ -9,7 +9,6 @@ export const InstaPost = (props) => {
           alt="Instgram post"
           className="instagram__instaPost--image"
         />
-        {/* <h2 className="findUs__instaPost--username">{props.post.username}</h2> */}
         <p className="instagram__instaPost--caption">{props.post.caption}</p>
       </div>
     )

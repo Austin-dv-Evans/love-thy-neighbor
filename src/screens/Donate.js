@@ -29,7 +29,7 @@ const Donate = () => {
                   : "donate__option-1"
               }
               onClick={() => setSelectedAmount(10)}
-            >
+            >cc
               $10
             </figure>
             <figure

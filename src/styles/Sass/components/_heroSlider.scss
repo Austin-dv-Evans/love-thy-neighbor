@@ -1,7 +1,8 @@
 .hero{
     margin: 2rem 2rem 0 0;
-    background-color: rgb(43, 41, 41);
-    width: 60%;
+    background-color: $grey-1;
+    width: 100%;
+    min-height: 800px;
     z-index: 1;
     margin-top: -13rem;
     // transition: all 2s;
@@ -18,7 +19,8 @@
 
     }
     @include respond(phone){
-
+      margin: 1rem 3rem 3rem 3rem;
+      
     }
     @include respond(tiny-phone){
 
@@ -42,6 +44,7 @@
       opacity: 1;
       transition: transform opacity;
       transition-duration: 3s;
+      filter: drop-shadow( 0px 2px 10px black);
     }
     &__caption {
       opacity: 0;
@@ -56,16 +59,13 @@
     &__caption--text {
       z-index: 15;
       color: $color-white;
-      font-size: 3rem;
+      font-size: 6rem;
       text-align: center;
-      margin-top: 1rem;
+      margin: 6rem;
       font-family: $Krubfont;
+      position: absolute;
+      bottom: 10%;
+      right: 0%;
+      font-weight: bolder;
     }
 }
-// {"access_token": "IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR", 
-//   "user_id": 17841402917632023}%
-
-//   curl -X GET \
-//   'https://graph.instagram.com/17841402917632023?fields=id,username&access_token=IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR'
-//   {"id":"17841402917632023","username":"hawleyfit"}%
-//   'https://graph.instagram.com/17841402917632023/media?fields=id,username,media_url,caption&access_token=IGQVJYaldzTDlVUjhfbzJTT1l1RDB3M1pCbXhLM0xlUzNJSXRxT09UMVRrc0tNY0VaUGhBbVZAfRm16MnB5ZAi14LU9ubUg3UDdfaWtXYkVqZA05CRjc0cXk3Y3NwSEk0ZA25uZAUs0RUhwTUdXYVFNVmlJMUgtR0IxQVhUR3dR

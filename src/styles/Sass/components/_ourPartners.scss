@@ -1,7 +1,10 @@
 .ourPartners {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   &__container{
-    height: 60rem;
+    min-height: 60rem;
     width: 100%;
     background-image: 
     linear-gradient(
@@ -10,11 +13,53 @@
       rgba(#000, 0.6)
     ),
     url('../../../assets/brick.jpg');
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.5rem;
+    padding: 3.5rem 8rem;
   }
   &__heading {
     font-size: 13rem;
     font-weight: 600;
-    font-family: $KidFont;
-    color: white;
+    font-family: $Krubfont;
+    color: $color-white;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
   }
+  &__logo {
+    width: 30rem;
+  }
+}
+.logo--1 {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 2;
+  filter: drop-shadow(3px 3px 10px $color-black);
+}
+.logo--2 {
+  grid-row: 4 / span 2;
+  grid-column: 1 / span 2;
+  align-self: center;
+  border-radius: 50px;
+  filter: drop-shadow(3px 3px 10px $color-black);
+}
+.logo--3 {
+  grid-row: 2 / span 2;
+  grid-column: 4 / span 2;
+  align-self: center;
+  filter: drop-shadow(3px 3px 10px $color-black);
+}
+.logo--4 {
+  grid-row: 4 / span 2;
+  grid-column: 3 / span 2;
+  align-self: center;
+  border-radius: 50px;
+  filter: drop-shadow(3px 3px 10px $color-black);
+}
+.logo--5 {
+  grid-row: 4 / span 2;
+  grid-column: 5 / span 2;
+  border-radius: 50px;
+  align-self: center;
+  filter: drop-shadow(3px 3px 10px $color-black);
 }

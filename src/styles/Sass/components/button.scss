@@ -1,26 +1,22 @@
 .button{
 
   &__donate{
-    background-color:white;
-    // background-image: linear-gradient(to bottom right, black, var(--color-primary));;
-    width: 14rem;
+    background-color:$color-primary;
+    width: 18rem;
     height: 6rem;
-    color: var(--color-primary);
+    color: $color-white;
     font-weight: bold;
     font-size: 2rem;
-    border-color: var(--color-primary);
+    border-color: $color-primary;
     border-radius: 4px;
-    font-weight: 400;
-    margin: 0 5rem 0 3rem;
-    text-shadow: 1px 1px #000000 ;
+    font-weight: 600;
+    text-shadow: 1px 1px $color-black ;
     border-width: 3px;
-
     &:hover{
       transform: scale(1.1);
       font-weight: 700;
-      color:black;
-      box-shadow: 0px 0px 15px var(--color-primary);
-      text-shadow: 3px 3px 3px var(--color-primary);
+      box-shadow: 0px 0px 15px $color-primary;
+      text-shadow: 3px 3px 3px $color-primary;
     }
   }
 }
@@ -30,7 +26,10 @@
     width: 20rem;
     height: 10rem;
     margin: 0;
-    background-color: black;
+    background-color: $color-black;
     border-radius: 8px;
+    position: fixed;
+    bottom: 2%;
+    right: 0%;
   }
 }

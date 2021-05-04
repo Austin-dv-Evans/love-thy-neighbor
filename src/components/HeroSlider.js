@@ -12,10 +12,11 @@ const HeroSlider = () => {
     const slides = [supplies, convo1, crewLTN, walkingUp]
 
     const captions = [
-      "We Provide Socks, Meals, Sanitary Products and More to Our Homeless Neighbors",
-      "Consitantly Helping Those In Need",
-      "Together, We Can Create Hope Where Hope Has Been Lost",
-      "Through Donations and Our Partners We Are Able To Supply Our Community With Essential Items They Need to Survive",
+      "Serving our homeless brothers and sisters.",
+      "Across our nation, with god and love in our hearts.",
+      "Helping those in need by providing; socks, meals and a conversation.",
+      "Thanks to our wonderful partners and donations from people like you.",
+      "Together we can lend a helping hand.",
     ]
 
     const nextSlide = () => {
@@ -26,8 +27,8 @@ const HeroSlider = () => {
     }
     
     useEffect(()=> {
-        let sliderTimer = setTimeout(nextSlide, 15000)
-        let captionTimer = setTimeout(nextCaption, 15000)
+        let sliderTimer = setTimeout(nextSlide, 115000)
+        let captionTimer = setTimeout(nextCaption, 115000)
         return function cleanUp() {
           clearTimeout(sliderTimer)
           clearTimeout(captionTimer)
@@ -47,7 +48,7 @@ const HeroSlider = () => {
                     </div>
                 )
             })}
-            { captions.map( (caption, index) => {
+            {/* { captions.map( (caption, index) => {
               return (
                 <div
                   key={index}
@@ -62,7 +63,7 @@ const HeroSlider = () => {
                   )}
                 </div>
               )
-            })}
+            })} */}
         </div>
     )
 }

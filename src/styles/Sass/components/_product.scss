@@ -12,7 +12,7 @@
       rgba(#000, 0.6)
       ),
       url('../../../assets/brick.jpg');
-      border: 5px solid black;
+      border: 5px solid $color-black;
       margin: 4rem 4rem 1rem 4rem;
       display: flex;
       flex-direction: column;
@@ -24,8 +24,8 @@
       width: 25rem;
     }
     &-name {
-      color: #fff;
-      font-family: $KidFont;
+      color: $color-white;
+      font-family: $Krubfont;
       font-size: 2.5rem;
     }
     &-price {
@@ -35,11 +35,11 @@
 }
 
 .view-options {
-  background-color: #000;
-  color: #fff;
+  background-color: $color-black;
+  color: $color-white;
   padding: 1rem;
   border-radius: 6px;
-  font-family: $KidFont;
+  font-family: $Krubfont;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
