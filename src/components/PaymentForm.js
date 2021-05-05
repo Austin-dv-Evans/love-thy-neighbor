@@ -50,25 +50,39 @@ const PaymentForm = ({ amount }) => {
   }
 
   const handleSubmit = async (event) => {
-    console.log('SUBMIT')
-    console.log(clientSecret)
     event.preventDefault();
     setProcessing(true)
+    const cardElement = elements.getElement(CardElement)
 
-    console.log('sending payment')
+    // const paymentMethodRes = await stripe.createPaymentMethod({
+    //   type: "card",
+    //   card: cardElement,
+    //   billing_details: {
+    //     name: paymentDetails.name
+    //   },
+    // });
 
+    // console.log(paymentMethodRes)
     const payload = await stripe.confirmCardPayment(clientSecret, {
       receipt_email: paymentDetails.email,
       payment_method: {
-        card: elements.getElement(CardElement)
-      }
+        type: "card",
+        card: cardElement,
+        billing_details: {
+          name: paymentDetails.name
+      },}
     })
+
     console.log(payload)
 
     if (payload.error) {
       console.log(payload.error)
       setError(`Payment Failed ${payload.error.message}`)
       setProcessing(false)
+    }else{
+      setError(null)
+      setProcessing(false)
+      setSucceeded(true)
     }
   }
 

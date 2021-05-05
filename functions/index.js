@@ -13,6 +13,7 @@ app.post("/payments/create", async (req, res) => {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount,
       currency: "usd",
+      payment_method_types: ["card"],
     });
     res.status(200).send(paymentIntent.client_secret);
   } catch (err) {
