@@ -7,18 +7,18 @@ const app = express();
 app.use(cors);
 app.use(express.json());
 
-app.get("/payments/create", async (req, res) => {
-  try{
-    const { amount } = req.body;
+app.post("/payments/create", async (req, res) => {
+  try {
+    const {amount} = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount,
-      currency: 'usd'
+      currency: "usd",
     });
     res.status(200).send(paymentIntent.client_secret);
   } catch (err) {
     res.status(500).json({
       statusCode: 500,
-      message: err.message,
+      message: "MY ERRROR",
     });
   }
 });
@@ -29,18 +29,18 @@ app.get("/payments/create", async (req, res) => {
 
 exports.createStripeCheckout = functions.https.onRequest(app);
 
-// exports.createStripeCheckout = functions.https.onRequest(async (request, response) => {
-//   response.set("Access-Control-Allow-Origin", "http://localhost:4200")  
+// exports.createStripeCheckout =
+// functions.https.onRequest(async (request, response) => {
+//   response.set("Access-Control-Allow-Origin", "http://localhost:4200")
 
 //   const { amount } = request.body;
-  
 //   console.log(request.body)
 //   console.log(amount)
 
-  // const paymentIntent = await stripe.paymentIntents.create({
-  //   amount: amount,
-  //   currency: 'usd'
-  // });
+//   const paymentIntent = await stripe.paymentIntents.create({
+//     amount: amount,
+//     currency: 'usd'
+//   });
 
 //   cors(request, response, () => {
 //     response.send({
@@ -48,4 +48,3 @@ exports.createStripeCheckout = functions.https.onRequest(app);
 //     })
 //   })
 // });
-
