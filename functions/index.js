@@ -9,8 +9,9 @@ app.use(express.json());
 
 app.post("/payments/create", async (req, res) => {
   try {
-    const {amount} = req.body;
+    const {amount, billing} = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
+      billing,
       amount: amount,
       currency: "usd",
       payment_method_types: ["card"],
@@ -23,10 +24,6 @@ app.post("/payments/create", async (req, res) => {
     });
   }
 });
-
-// app.get("*", (req, res) => {
-//   res.status(404).send("404, Not Found");
-// });
 
 exports.createStripeCheckout = functions.https.onRequest(app);
 

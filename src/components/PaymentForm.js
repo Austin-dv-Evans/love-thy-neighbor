@@ -9,13 +9,16 @@ import {
 const initialPaymentState = {
   name: '',
   email: '',
-  address: '',
-  city: '',
-  state: '',
-  zip: '',
+  address: {
+    line1: '',
+    city: '',
+    state: '',
+    country: '',
+    postal_code: '',}
 }
 
 const PaymentForm = ({ amount }) => {
+  const [nameOnCard, setNameOnCard] = useState('')
   const [paymentDetails, setPaymentDetails] = useState(initialPaymentState)
   const [shippingDetails, setShippingDetails] = useState({})  
   const [shippingDifferent, setShippingDifferent] = useState(false)
@@ -26,6 +29,7 @@ const PaymentForm = ({ amount }) => {
   const [clientSecret, setClientSecret] = useState('')
   const stripe = useStripe()
   const elements = useElements()
+  const cardElement = elements.getElement(CardElement)
 
   useEffect(() => {
     axios.create({
@@ -35,7 +39,19 @@ const PaymentForm = ({ amount }) => {
         amount: amount * 100,
       })
       .then(({ data: clientSecret }) => {
-        setClientSecret(clientSecret)
+        stripe.createPaymentMethod({
+          type: 'card',
+          card: cardElement,
+          billing_details: {
+            name: paymentDetails.name,
+            address: {
+              ...paymentDetails.address
+            }
+          } 
+        })
+      })
+      .then(({ paymentMethod }) => {
+
       })
       .catch(err => setError(err))
   }, [])
@@ -52,7 +68,6 @@ const PaymentForm = ({ amount }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true)
-    const cardElement = elements.getElement(CardElement)
 
     // const paymentMethodRes = await stripe.createPaymentMethod({
     //   type: "card",
@@ -91,10 +106,11 @@ const PaymentForm = ({ amount }) => {
       <form className="payment-form__form"  onSubmit={handleSubmit}>
         <input name="name" value={paymentDetails.name} placeholder="Name" onChange={handleInfoFormChange} />
         <input name="email" value={paymentDetails.email} placeholder="Email" onChange={handleInfoFormChange} />
-        <input name="address" value={paymentDetails.address} placeholder="Address" onChange={handleInfoFormChange} />
-        <input name="city" value={paymentDetails.city} placeholder="City" onChange={handleInfoFormChange} />
-        <input name="state" value={paymentDetails.state} placeholder="State" onChange={handleInfoFormChange} />
-        <input name="zip" value={paymentDetails.zip} placeholder="Postal Code" onChange={handleInfoFormChange} />
+        <input name="address" value={paymentDetails.address.line1} placeholder="Address" onChange={handleInfoFormChange} />
+        <input name="city" value={paymentDetails.address.city} placeholder="City" onChange={handleInfoFormChange} />
+        <input name="state" value={paymentDetails.address.state} placeholder="State" onChange={handleInfoFormChange} />
+        <input name="country" value={paymentDetails.address.country} placeholder="State" onChange={handleInfoFormChange} />
+        <input name="zip" value={paymentDetails.address.postal_code} placeholder="Postal Code" onChange={handleInfoFormChange} />
         <CardElement
           options={{
             style: {
