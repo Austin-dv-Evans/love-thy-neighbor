@@ -9,9 +9,8 @@ app.use(express.json());
 
 app.post("/payments/create", async (req, res) => {
   try {
-    const {amount, billing} = req.body;
+    const {amount} = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
-      billing,
       amount: amount,
       currency: "usd",
       payment_method_types: ["card"],
