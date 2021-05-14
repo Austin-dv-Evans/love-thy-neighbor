@@ -7212,6 +7212,15 @@ breakpoint argument choices:
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  80% { }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 @keyframes wobble {
   0% {
     transform: rotate(-10deg); }
@@ -7279,7 +7288,8 @@ breakpoint argument choices:
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #0D0C0C; }
   @media only screen and (max-width: 112.5em) {
     html {
       font-size: 65%; } }
@@ -7292,6 +7302,9 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 45%; } }
+
+.App {
+  background-color: #931313; }
 
 .landing__nameLogo {
   width: 58%;
@@ -7345,7 +7358,7 @@ html {
 .hero {
   margin: 2rem 2rem 0 0;
   background-color: #2b2929;
-  width: 100%;
+  width: 76%;
   min-height: 800px;
   z-index: 1;
   margin-top: -13rem; }
@@ -7491,7 +7504,7 @@ html {
 
 .logo--1 {
   grid-row: 2 / span 2;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 2;
   filter: drop-shadow(3px 3px 10px #0D0C0C); }
 
 .logo--2 {
@@ -7503,7 +7516,7 @@ html {
 
 .logo--3 {
   grid-row: 2 / span 2;
-  grid-column: 4 / span 2;
+  grid-column: 3 / span 2;
   align-self: center;
   filter: drop-shadow(3px 3px 10px #0D0C0C); }
 
@@ -7516,6 +7529,13 @@ html {
 
 .logo--5 {
   grid-row: 4 / span 2;
+  grid-column: 5 / span 2;
+  border-radius: 50px;
+  align-self: center;
+  filter: drop-shadow(3px 3px 10px #0D0C0C); }
+
+.logo--6 {
+  grid-row: 2 / span 2;
   grid-column: 5 / span 2;
   border-radius: 50px;
   align-self: center;
@@ -7645,12 +7665,13 @@ html {
       flex-direction: column; } }
 
 .aboutPage__container {
-  background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(13, 12, 12, 0.6)), url("../../../assets/brick.jpg");
+  background-image: linear-gradient(to right bottom, rgba(147, 19, 19, 0.6), rgba(13, 12, 12, 0.6)), url("../../../assets/ltnHomelessPage.jpg");
+  background-attachment: fixed;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 1.5rem;
-  padding: 1.5rem; }
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 3.5rem;
+  padding: 4.5rem; }
 
 .aboutPage__missionContainer {
   position: absolute;
@@ -7682,35 +7703,37 @@ html {
   font-size: 7rem;
   color: #FEFEFE;
   text-align: center;
-  font-family: "Krub", sans-serif; }
+  font-family: "Krub", sans-serif;
+  place-self: center; }
   @media only screen and (max-width: 75em) {
     .aboutPage__textBubble--heading {
       margin: 0; } }
 
 .grid-1 {
   grid-row: 1 / span 1;
-  grid-column: 1 / span 3; }
+  grid-column: 1 / span 4; }
 
 .grid-2 {
-  grid-row: 2 / span 1;
-  grid-column: 2 / span 5;
-  font-weight: 600; }
+  grid-row: 1 / span 1;
+  grid-column: 5 / span 4;
+  font-weight: 600;
+  place-self: center; }
 
 .grid-3 {
-  grid-row: 3 / span 2;
-  grid-column: 3/ span 2; }
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 4; }
 
 .grid-4 {
-  grid-row: 3 / span 2;
-  grid-column: 1 / span 2; }
+  grid-row: 2 / span 1;
+  grid-column: 5 / span 4; }
 
 .grid-5 {
-  grid-row: 3 / span 2;
-  grid-column: 5 / span 3; }
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 6; }
 
 .gallery {
   height: 100%;
-  background-color: #931313;
+  background-color: #87030b;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 5vw);
@@ -7782,6 +7805,11 @@ html {
   font-weight: 600;
   text-align: center; }
 
+.instagram__loading {
+  color: #FEFEFE;
+  font-size: 4rem;
+  margin-top: 2rem; }
+
 .instagram__instaPost--container {
   background-color: #FEFEFE;
   height: 58rem;
@@ -7809,6 +7837,11 @@ html {
   line-break: strict;
   text-align: center;
   padding: 0rem 1rem; }
+
+.instagram__followFooter {
+  color: #FEFEFE;
+  font-family: "Krub", sans-serif;
+  margin-bottom: 2rem; }
 
 .shop__page {
   display: flex;
@@ -8067,7 +8100,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid #0D0C0C; }
+    border-bottom: 6px solid #0D0C0C;
+    animation: moveInUp .5s ease-out; }
   .footerNew__form {
     display: flex;
     align-items: center; }
@@ -8103,13 +8137,15 @@ html {
   background-repeat: no-repeat;
   margin-left: 10%; }
   .book__form--heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2.5rem 0;
     font-family: "Krub", sans-serif;
     font-size: 7rem;
     font-weight: 700;
     filter: drop-shadow(10px 10px 20px #931313);
-    color: #FEFEFE;
-    width: fit-content; }
+    color: #FEFEFE; }
     @media only screen and (max-width: 75em) {
       .book__form--heading {
         font-size: 5rem; } }
@@ -8118,7 +8154,7 @@ html {
         font-size: 4rem; } }
     @media only screen and (max-width: 37.5em) {
       .book__form--heading {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
 
 .form {
   font-weight: 700;
@@ -8128,6 +8164,9 @@ html {
   width: 100%; }
   .form__group:not(:last-child) {
     margin-bottom: 2rem; }
+  .form__group--subscribe {
+    display: flex;
+    margin: 3rem 3rem 3rem 0rem; }
   .form__input {
     padding: 1.5rem 2rem;
     font-size: 2rem;
@@ -8144,6 +8183,18 @@ html {
       border-bottom: 3px solid #931313; }
     .form__input:focus:invalid {
       border-bottom: 3px solid #931313; }
+  .form__checkbox {
+    width: 3rem;
+    height: 3rem; }
+    .form__checkbox--label {
+      font-family: "Krub", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-right: 3rem;
+      filter: drop-shadow(8px 8px 20px #931313);
+      color: #0D0C0C;
+      background-color: rgba(254, 254, 254, 0.7);
+      padding: .5rem; }
   .form__submit {
     margin-bottom: 5rem;
     text-transform: uppercase;

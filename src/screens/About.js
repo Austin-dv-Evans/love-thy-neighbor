@@ -19,11 +19,11 @@ const About = () => {
           <li className="aboutPage__textBubble--text grid-3">
             We are a movement, convincing others to help out and notice their
             unhoused neighbors. Everyone is a human. We provide meals,
-            clothing, socks and AlWAYS a conversation.
+            clothing, socks, and AlWAYS a conversation.
           </li>
           <li className="aboutPage__textBubble--text grid-4">
             Generous local businesses have committed to donating food each week
-            for our volunteers to hand out.
+            for our volunteers to hand out. Join our partners and have your logo displayed below. Contact us for more information.
           </li>
           <li className="aboutPage__textBubble--text grid-5">
             Love thy Neighbor, Inc. is a registered 501(c)3 non-profit

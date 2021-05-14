@@ -18,6 +18,8 @@ html {
   font-size: 62.5%; // 1 rem = 10px 10px/16px = 62.5%
   // border box reset
   box-sizing: border-box;
+
+  background-color: $color-black;
   
   @include respond(big-desktop) {
   // 1rem = 12 12/16
@@ -34,4 +36,7 @@ html {
   @include respond(phone) {
   font-size: 45%;
   }
+}
+.App {
+  background-color: $color-primary;
 }

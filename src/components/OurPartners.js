@@ -4,6 +4,7 @@ import allStars from '../assets/AllStarsAFE.png'
 import bandits from '../assets/DenverBandits.png'
 import LaMuerte from '../assets/LaMuerteFootball.jpeg'
 import saucyChops from '../assets/saucyChops.webp'
+import threeAm from '../assets/3am.jpg'
 
 const OurPartners = () => {
   return (
@@ -17,6 +18,7 @@ const OurPartners = () => {
       <img src={saucyChops} alt="" className="ourPartners__logo logo--3"/>
       <img src={LaMuerte} alt="" className="ourPartners__logo logo--4"/>
       <img src={bandits} alt="" className="ourPartners__logo logo--5"/>
+      <img src={threeAm} alt="" className="ourPartners__logo logo--6"/>
     </div>
     </div>
     

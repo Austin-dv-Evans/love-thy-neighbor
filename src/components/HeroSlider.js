@@ -27,8 +27,8 @@ const HeroSlider = () => {
     }
     
     useEffect(()=> {
-        let sliderTimer = setTimeout(nextSlide, 115000)
-        let captionTimer = setTimeout(nextCaption, 115000)
+        let sliderTimer = setTimeout(nextSlide, 15000)
+        let captionTimer = setTimeout(nextCaption, 15000)
         return function cleanUp() {
           clearTimeout(sliderTimer)
           clearTimeout(captionTimer)

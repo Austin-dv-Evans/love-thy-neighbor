@@ -35,7 +35,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid $color-black;
+    border-bottom: 6px solid $color-black;
+    animation: moveInUp .5s ease-out;
   }
   &__form {
     display: flex;

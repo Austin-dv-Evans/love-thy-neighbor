@@ -24,12 +24,13 @@
       rgba($color-primary ,0.6),
       rgba($color-black, 0.6)
     ),
-    url('../../../assets/brick.jpg');
+    url('../../../assets/ltnHomelessPage.jpg');
+    background-attachment: fixed;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1.5rem;
-    padding: 1.5rem; 
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 3.5rem;
+    padding: 4.5rem; 
   }
   &__missionContainer {
     position: absolute;
@@ -64,6 +65,7 @@
     color: $color-white;
     text-align: center;
     font-family: $Krubfont;
+    place-self: center;
     @include respond (tab-land) {
       margin: 0;
     }
@@ -72,29 +74,30 @@
 
 .grid-1 {
   grid-row: 1 / span 1;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
 }
 .grid-2 {
-  grid-row: 2 / span 1;
-  grid-column: 2 / span 5;
+  grid-row: 1 / span 1;
+  grid-column: 5 / span 4;
   font-weight: 600;
+  place-self: center;
 }
 .grid-3 {
-  grid-row: 3 / span 2;
-  grid-column: 3/ span 2 ;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 4 ;
 }
 .grid-4 {
-  grid-row: 3 / span 2;
-  grid-column: 1 / span 2 ;
+  grid-row: 2 / span 1;
+  grid-column: 5 / span 4 ;
 }
 .grid-5 {
-  grid-row: 3 / span 2;
-  grid-column: 5 / span 3;
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 6;
 }
 
 .gallery {
   height: 100%;
-  background-color: $color-primary;
+  background-color: $color-primary-insta;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(11, 5vw);

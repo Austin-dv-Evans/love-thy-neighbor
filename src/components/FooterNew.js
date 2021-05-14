@@ -37,7 +37,7 @@ const FooterNew = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Full Name"
+              placeholder="Name"
               id="name"
               className="footerNew__formInput"
               required
@@ -64,9 +64,6 @@ const FooterNew = () => {
             />
           </div>
         </form>
-        <h4 className="footerNew__formHeader">
-          Subscribe to our mailing list!
-        </h4>
       </div>
 
       <div className="footerNew">
