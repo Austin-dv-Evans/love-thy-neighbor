@@ -32,14 +32,16 @@
   }
 }
 .logo--1 {
-  grid-row: 2 / span 2;
-  grid-column: 1 / span 2;
+  grid-row: 4 / span 2;
+  grid-column: 3 / span 2;
   filter: drop-shadow(3px 3px 10px $color-black);
+  place-self: center;
 }
 .logo--2 {
   grid-row: 4 / span 2;
   grid-column: 1 / span 2;
   align-self: center;
+  place-self: center;
   border-radius: 50px;
   filter: drop-shadow(3px 3px 10px $color-black);
 }
@@ -47,12 +49,14 @@
   grid-row: 2 / span 2;
   grid-column: 3 / span 2;
   align-self: center;
+  place-self: center;
   filter: drop-shadow(3px 3px 10px $color-black);
 }
 .logo--4 {
-  grid-row: 4 / span 2;
-  grid-column: 3 / span 2;
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 2;
   align-self: center;
+  place-self: center;
   border-radius: 50px;
   filter: drop-shadow(3px 3px 10px $color-black);
 }
@@ -61,6 +65,7 @@
   grid-column: 5 / span 2;
   border-radius: 50px;
   align-self: center;
+  place-self: center;
   filter: drop-shadow(3px 3px 10px $color-black);
 }
 .logo--6 {
@@ -68,5 +73,6 @@
   grid-column: 5 / span 2;
   border-radius: 50px;
   align-self: center;
+  place-self: center;
   filter: drop-shadow(3px 3px 10px $color-black);
 }

@@ -1,13 +1,6 @@
 .customModal {
-  height: 500px;
-  width: 60%;
-  background-color: $color-white;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 18%;
-  right: calc(70% - 500px);
-  z-index: 10;
+  
+  
   &__heading{
 
 
@@ -16,17 +9,5 @@
     }
   }
 
-  &__body {
-    height: 40px;
-    width: 100%;
-  }
-  
-  &__close {
-    color: $color-primary;
-    padding: 1rem;
-    margin-left: calc(100% - 4rem);
-    height: 4rem;
-    width: 4rem;
-    text-align: center;
-  }
+
 }

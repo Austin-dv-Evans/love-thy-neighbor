@@ -1,16 +1,31 @@
 .payment-form{
     margin: 0 auto;
-    width: 40%;
+    width: 80%;
+    margin-top: 4rem;
+    
     &__form{
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+
     }
     & input{
-        margin: 1rem 0;
+      margin: 1rem 0;
+      padding: 1rem;
     }
 
     &__button{
-        width: 100%;
-        margin: 1rem 0;
+      margin: 6rem 0 0 0;
+      width: 100%;
+      height: 5rem;
+      font-size: 3rem !important;
+      color: $color-white;
+      font-weight: bold;
+      font-size: 2rem;
+      border-color: $color-primary;
+      background-color: $color-primary;
+      border-radius: 14px;
+      font-weight: 400;
+      text-shadow: 1px 1px $color-black ;
+      border-width: 3px;
     }
 }
