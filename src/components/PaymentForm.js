@@ -183,7 +183,7 @@ const PaymentForm = ({ amount }) => {
           </button>
         </form>
       }
-      <h3>{error ? `Error ${error}` : ''}</h3>
+      <h3>{error ? `Payment Failed: ${error}` : ''}</h3>
     </div>
   )
 }
