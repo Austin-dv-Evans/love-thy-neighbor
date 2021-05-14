@@ -75,7 +75,13 @@ const Donate = () => {
             <figure
               className={
 
-                selectedAmount === 0 || selectedAmount === 10 || selectedAmount === 25 || selectedAmount === 50 || selectedAmount === 75 || selectedAmount === 100
+                selectedAmount === 0 
+                || selectedAmount === 10 
+                || selectedAmount === 25 
+                || selectedAmount === 50 
+                || selectedAmount === 75 
+                || selectedAmount === 100
+
                   ? "donate__option-1"
                   : "donate__option-active"
               }
@@ -149,7 +155,7 @@ const Donate = () => {
               </div>
               <div className="customModal__body">
                 <h2>Credit Card Info</h2>
-                <PaymentForm />
+                <PaymentForm amount={ selectedAmount } />
               </div>
             </div>
           </Elements>

@@ -1,6 +1,7 @@
 import React from 'react'
+import PaymentForm from './PaymentForm'
 
-const Modal = () => {
+const Modal = ({ amount }) => {
   return (
     <div className="modal">
       <div className="modal__heading">
@@ -9,7 +10,7 @@ const Modal = () => {
         </h1>
       </div>
       <div className="modal__body">
-        
+        <PaymentForm amount={amount} />
       </div>
     </div>
   )

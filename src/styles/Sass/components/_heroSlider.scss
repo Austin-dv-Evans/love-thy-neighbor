@@ -46,26 +46,5 @@
       transition-duration: 3s;
       filter: drop-shadow( 0px 2px 10px black);
     }
-    &__caption {
-      opacity: 0;
-      transition-duration: 3s ;
-      animation-duration: 3s;
-    }
-    &__caption-active {
-      opacity: 1;
-      transition: transform opacity;
-      transition-duration: 3s;
-    }
-    &__caption--text {
-      z-index: 15;
-      color: $color-white;
-      font-size: 6rem;
-      text-align: center;
-      margin: 6rem;
-      font-family: $Krubfont;
-      position: absolute;
-      bottom: 10%;
-      right: 0%;
-      font-weight: bolder;
-    }
+
 }
