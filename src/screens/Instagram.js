@@ -44,11 +44,11 @@ const Instagram = () => {
           instaFeed()
         }
       </div>
-      {!loading &&
+      {/* {!loading &&
         <div className="instagram__followUsHere">
           <h1 className="instagram__followFooter">Follow Love Thy Neighbor On Instagram and Facebook</h1>
         </div>
-      }
+      } */}
       
     </div>
   )

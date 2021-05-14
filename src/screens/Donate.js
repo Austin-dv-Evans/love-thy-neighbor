@@ -14,6 +14,17 @@ const Donate = () => {
 
   const options = [10, 25, 50, 75, 100]
   
+  const donateButton = () => {
+    setPaymentOpen(!paymentOpen)
+    scrollToTop()
+  }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 55,
+      behavior: "smooth",
+    })
+  }
+
   console.log(selectedAmount)
   return (
     <div className="donate">
@@ -29,7 +40,7 @@ const Donate = () => {
                   : "donate__option-1"
               }
               onClick={() => setSelectedAmount(10)}
-            >cc
+            >
               $10
             </figure>
             <figure
@@ -117,7 +128,7 @@ const Donate = () => {
           </div>
           <button
             className="donate__button"
-            onClick={() => setPaymentOpen(!paymentOpen)}
+            onClick={() => donateButton()}
           >
             Donate
           </button>
@@ -141,6 +152,9 @@ const Donate = () => {
 
         {paymentOpen && (
           <Elements stripe={stripeTestPromise}>
+            <div className="customModalBlur">
+
+            
             <div className="customModal">
               <div className="customModal__heading">
                 <button
@@ -150,13 +164,14 @@ const Donate = () => {
                   X
                 </button>
                 <h1 className="customModal__heading--text">
-                  Thank You For Donating Please Select Payment Method Below
+                  Thank You For Donating!
                 </h1>
               </div>
               <div className="customModal__body">
-                <h2>Credit Card Info</h2>
+                <h2>Credit Card Info:</h2>
                 <PaymentForm amount={ selectedAmount } />
               </div>
+            </div>
             </div>
           </Elements>
         )}

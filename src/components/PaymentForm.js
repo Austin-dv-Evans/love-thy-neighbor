@@ -179,7 +179,7 @@ const PaymentForm = ({ amount }) => {
             className="payment-form__button"
             disabled={processing || disabled || processing}
           >
-            <span>{processing ? <span> processing </span> : 'Pay Now'}</span>
+            <span>{processing ? <span> processing </span> : 'Donate Now'}</span>
           </button>
         </form>
       }
