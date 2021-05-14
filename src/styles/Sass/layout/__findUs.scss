@@ -1,10 +1,6 @@
 .instagram {
   &__pageContainer {
-    background-image: linear-gradient(
-      to top left,
-      white,
-      black
-    );
+    background-color: $grey-1;
     height: fit-content;
     min-height: 90vh;
     display: flex;
@@ -13,7 +9,6 @@
     align-items: center;
     justify-content: center;
   }
-  
 
   &__section--container {
     display: flex;
@@ -25,20 +20,24 @@
     color: white;
     font-size: 5rem;
     margin: 3rem 8rem;
-    font-family: $KidFont;
+    font-family: $Krubfont;
     font-weight: 600;
     text-align: center;
-
+  }
+  &__loading {
+    color: $color-white;
+    font-size: 4rem;
+    margin-top: 2rem;
   }
   &__instaPost {
     
     &--container {
-      background-image: url('../../../assets/what-the-hex-dark.png');
-      height: 55rem;
-      padding: 2rem;
+      background-color: $color-white;
+      height: 58rem;
+      padding: 3rem 2rem 2rem 2rem;
       min-height: fit-content;
-      width: 35rem;
-      border: 10px solid $color-primary;
+      width: 45rem;
+      border-radius: 20px;
       margin: 4rem;
       display: flex;
       flex-direction: row;
@@ -46,16 +45,30 @@
       align-items: center;
       flex-wrap: wrap;
       overflow: scroll;
+      // filter: drop-shadow(0 3px 10px -10px $color-black);
     }
     &--image {
-      width: 26rem;
-      height: 28rem;
+      width: 36rem;
+      height: 38rem;
+      margin: 2rem 0rem;
+      border-radius: 20px;
     }
 
     &--caption {
-      color: white;
+      color: $color-black;
       font-size: 2rem;
       line-break: strict;
+      text-align: center;
+      padding: 0rem 1rem;
     }
+  }
+  &__followUsHere {
+
+  }
+
+  &__followFooter {
+    color: $color-white;
+    font-family: $Krubfont;
+    margin-bottom: 2rem;
   }
 }

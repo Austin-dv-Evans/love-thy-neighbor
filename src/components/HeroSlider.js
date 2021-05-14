@@ -7,16 +7,31 @@ import walkingUp from '../assets/walkingUp.jpg'
 
 const HeroSlider = () => {
     const [current, setCurrent] = useState(0)
+    const [currentCaption, setCurrentCaption] = useState(0)
+
     const slides = [supplies, convo1, crewLTN, walkingUp]
-    
+
+    const captions = [
+      "Serving our homeless brothers and sisters.",
+      "Across our nation, with god and love in our hearts.",
+      "Helping those in need by providing; socks, meals and a conversation.",
+      "Thanks to our wonderful partners and donations from people like you.",
+      "Together we can lend a helping hand.",
+    ]
+
     const nextSlide = () => {
         setCurrent(current === slides.length - 1 ? 0 : current + 1 )
     }
+    const nextCaption = () => {
+        setCurrentCaption(currentCaption === captions.length - 1 ? 0 : currentCaption + 1 )
+    }
     
     useEffect(()=> {
-        let sliderTimer = setTimeout(nextSlide, 10000)
+        let sliderTimer = setTimeout(nextSlide, 15000)
+        let captionTimer = setTimeout(nextCaption, 15000)
         return function cleanUp() {
           clearTimeout(sliderTimer)
+          clearTimeout(captionTimer)
         }
     })
 
@@ -33,6 +48,22 @@ const HeroSlider = () => {
                     </div>
                 )
             })}
+            {/* { captions.map( (caption, index) => {
+              return (
+                <div
+                  key={index}
+                  className={
+                    currentCaption === index
+                      ? "hero__caption--active"
+                      : "hero__caption"
+                  }
+                >
+                  {currentCaption === index && (
+                    <h6 className="hero__caption--text">{caption}</h6>
+                  )}
+                </div>
+              )
+            })} */}
         </div>
     )
 }

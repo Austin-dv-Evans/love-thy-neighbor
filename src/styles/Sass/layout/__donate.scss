@@ -1,9 +1,10 @@
 .donate {
-  background-image: linear-gradient(
-      to top left,
-      white,
-      black
-    );
+  // background-image: linear-gradient(
+  //     to top left,
+  //    rgba(0,0,0, 0.9),
+  //     rgba(0,0,0,.8),
+  //   );
+  background-image:url('../../../assets/dark-honeycomb\ 2.png');
     height: fit-content;
   &__pageContainer{
     height: 100vh;
@@ -17,15 +18,15 @@
     // color: $color-primary;
     padding: 2rem;
     text-align: center;
-    font-family: $KidFont;
+    font-family: $Krubfont;
     font-size: 7rem;
     font-weight: 700;
     filter: drop-shadow(10px 10px 20px $color-primary);
-    color: white;
+    color: $color-white;
   }
 
   &__donationInfo{
-    background-color: grey;
+    background-color: $color-white;
     height: 67rem;
     width: 50rem;
     margin: 1rem;
@@ -33,9 +34,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 6px 20px $color-primary;
-    border-radius: 5px;
-    border: 5px outset $color-primary-dark;
+    // box-shadow: 3px 6px 20px $color-primary;
+    border-radius: 25px;
+    // border: 5px outset $color-primary-dark;
 
     &-details {
       height: 100%;
@@ -46,7 +47,7 @@
     }
   }
   &__donationSelections{
-    background-color: grey;
+    background-color: $color-white;
     height: 67rem;
     width: 50rem;
     margin: 1rem;
@@ -54,9 +55,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 3px 6px 20px $color-primary;
-    border-radius: 5px;
-    border: 5px outset $color-primary-dark;
+    // box-shadow: 3px 6px 20px $color-primary;
+    border-radius: 25px;
+    // border: 5px outset $color-primary-dark;
   }
   &__subheading {
     color: $color-primary;
@@ -82,28 +83,32 @@
     grid-template-columns: repeat(3, 1fr);
     &-1{
       margin: 1rem;
-      background-color: $color-primary;
-      color: white;
+      background-color: $color-white;
+      color: $color-black;
       text-align: center;
       font-size: 2.75rem;
       display: flex;
+      border-radius: 15px;
       align-items: center;
       flex-direction: column;
       justify-content: center;
       min-height: 81px;
+      border: 1px solid $color-black;
+      
     }
     &-active{
       margin: 1rem;
       background-color: $color-primary;
-      color: white;
+      color: $color-white;
       text-align: center;
+      border-radius: 15px;
       font-size: 2.75rem;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
       min-height: 81px;
-      border: 8px outset $color-primary-dark;
+      // border: 8px outset $color-primary-dark;
     }
   }
   &__option-2 {
@@ -115,14 +120,15 @@
   &__button {
     width: 100%;
     height: 5rem;
-    font-size: 3rem;
-    color: var(--color-primary);
+    font-size: 3rem !important;
+    color: $color-white;
     font-weight: bold;
     font-size: 2rem;
-    border-color: var(--color-primary);
-    border-radius: 4px;
+    border-color: $color-primary;
+    background-color: $color-primary;
+    border-radius: 14px;
     font-weight: 400;
-    text-shadow: 1px 1px #000000 ;
+    text-shadow: 1px 1px $color-black ;
     border-width: 3px;
   }
 }
@@ -156,8 +162,10 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  border: 5px solid $color-primary;
+  border: 1px solid $color-black;
   padding: 1rem;
+  border-radius: 20px;
+  background-color: $color-white;
 }
 .anonomysCheck{
   font-size: 1.5rem;
@@ -165,8 +173,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border: 5px solid $color-primary;
+  border: 1px solid $color-black;
   padding: 1rem;
+  background-color: $color-white;
+  border-radius: 20px;
 }
 .leaveNote{
   font-size: 2rem;

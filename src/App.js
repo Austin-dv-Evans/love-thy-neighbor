@@ -16,6 +16,7 @@ import Shop from './screens/Shop'
 import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Donate from './screens/Donate';
+import FooterNew from './components/FooterNew';
 
 
 const PUBLIC_KEY = process.env.REACT_APP_KEY
@@ -52,7 +53,7 @@ function App() {
             
           </Route>
         </Switch>
-        <Footer />
+        <FooterNew/>
       </Router>
     </div>
     </Elements>

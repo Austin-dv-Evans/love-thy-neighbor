@@ -1,13 +1,13 @@
 
 .nav{
-  background-color: black;
+  background-color: $color-black;
   position: relative;
   z-index: 10;
   display: flex;
   align-items: center;
-  font-family: $KidFont;
+  font-family: $Krubfont;
   justify-content: center;
-  box-shadow: 0px 3px 10px var(--color-primary);
+  box-shadow: 0px 3px 10px $color-primary;
 
     &__navbar{
       height: 16vh;
@@ -17,9 +17,8 @@
       align-items: center;
       margin-left: auto;
         &--brand{
-            height: 13rem;
-            width: 20rem;
-
+            height: 18rem;
+            width: 18rem;
             top: 0;
         }
         &--link{
@@ -27,68 +26,91 @@
           color:white;
           margin: 0 5rem 0 3rem;
           transition: all .3s;
-          
           &:hover{
-            color:var(--color-primary);
+            color: $color-primary;
           }
           @include respond(tab-port){
             margin: 3rem;
             font-size: 3rem;
             &:hover{
-              color: $black;
+              color: $color-black;
               transform: scale(1.5);
             }
           }
         }
     }
-    &__menu--true-hidden{
+    &__menu--main{
       z-index: 1;
-      display: none;
-    }
-    &__menu--false-displayed{
-      z-index: 1;
-      margin-right: 8rem;
+      // margin-right: 8rem;
       padding: 2rem;
       border-radius: 10px;
       animation-name: moveInLeft;
-      background-color: rgba($color: #000000, $alpha: 0.4);
+      background-color: rgba($color: $color-black, $alpha: 0.4);
       animation-duration: .5s;
       animation-timing-function: ease-out;
       @include respond(tab-land){
-        margin-right: 4rem;
       }
       @include respond(tab-port){
-        background-color: $color-primary;
-        position: absolute;
-        right: -4rem;
-        top: 106%;
-        display: flex;
-        flex-direction: column;
-        width: 35vw;
-        height: 61vh;
-        justify-content: center;
-        text-align: center;
+        display: none;
       }
     }
     &__menuButton{
+      display: none;
       margin: 0 3rem;
       transform: rotate(90deg);
       background-color: transparent;
       width: 6rem;
       height: 6rem;
-      color: var(--color-primary);
+      color: $color-primary;
       font-weight: bold;
       font-size: 3rem;
       border-radius: 8px;
       font-weight: 400;
-      text-shadow: 1px 1px #000000 ; 
+      text-shadow: 1px 1px $color-black ; 
       transition: all 1s;
-      border-color: var(--color-primary);
+      border-color: $color-primary;
+      @include respond(tab-port){
+        display: block;
+      }
 
       &:hover{
         transform: scale(1.1);
         font-weight: 700;
-        box-shadow: 0px 0px 15px var(--color-primary);
+        box-shadow: 0px 0px 15px $color-primary;
       }
+    }
+
+    &__menu--mobile {
+      display: none;
+
+      @include respond(tab-port){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0%;
+        background-color: $color-primary;
+        z-index: 1;
+        padding: 3rem;
+        border-radius: 20px;
+        z-index: 10;
+        font-family: $Krubfont;
+      }
+    }
+    &__menu--hidden {
+      display: none;
+    }
+
+
+    &__donateTab {
+      position: fixed;
+      right: 0%;
+      top: 17%;
+      background-color: transparent;
+
+      // @include respond(tab-port){
+      //   bottom: 0%;
+      // }
     }
 }

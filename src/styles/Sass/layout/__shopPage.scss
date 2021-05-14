@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: white;
-    background-color: var(--color-primary);
+    color: $color-white;
+    background-color: $color-primary;
 
     &-heading {
       width: 100%;
