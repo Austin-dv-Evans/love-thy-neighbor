@@ -478,28 +478,33 @@ const PaymentForm = ({ amount }) => {
             <option value="ZW">Zimbabwe</option>
           </select>
           {/* <input name="postal_code" value={address.postal_code} placeholder="Postal Code" onChange={handleAddressFormChange} /> */}
-          <CardElement
-            options={{
-              style: {
-                base: {
-                  color: '#424770',
-                  '::placeholder': {
-                    color: '#aab7c4',
+          <div>
+            <CardElement
+              options={{
+                style: {
+                  base: {
+                    color: '#424770',
+                    iconColor: '#010101',
+                    lineHeight: '35px',
+                    '::placeholder': {
+                      color: '#aab7c4',
+                    },
+                  },
+                  invalid: {
+                    color: '#9e2146',
+                    iconColor: '#9e2146'
                   },
                 },
-                invalid: {
-                  color: '#9e2146',
-                  iconColor: '#9e2146'
-                },
-              },
-            }}
-            onChange={handleChange}
-          />
+              }}
+              onChange={handleChange}
+            />
+
+          </div>
           <button
             className="payment-form__button"
             disabled={processing || disabled || processing}
           >
-            <span>{processing ? <span> <div className="spinner" id="spinner"></div> </span> : 'Donate Now'}</span>
+            <span>{processing ? <span> <div className="spinner" id="spinner"></div> </span> : `Donate $${amount}`}</span>
           </button>
         </form>
       }

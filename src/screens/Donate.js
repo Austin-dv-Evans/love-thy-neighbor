@@ -161,7 +161,7 @@ const Donate = () => {
                   className="customModal__close"
                   onClick={() => setPaymentOpen(!paymentOpen)}
                 >
-                  X
+                  <span>+</span>
                 </button>
                 <h1 className="customModal__heading--text">
                   Thank You For Donating!
