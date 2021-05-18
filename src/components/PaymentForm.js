@@ -104,26 +104,26 @@ const PaymentForm = ({ amount }) => {
         return createPayMethod
       })
       .then(({ paymentMethod }) => {
-        console.log('p method', paymentMethod)
-
         return stripe.confirmCardPayment(secret, {
           receipt_email: paymentDetails.email,
           payment_method: paymentMethod.id
         }).then(payload => {
-          console.log(payload)
-          if (payload.error) {
-            console.log(payload.errorerror)
-            setError(`Payment Failed ${payload.error.message}`)
-            setProcessing(false)
-          } else {
-            setError(null)
-            setProcessing(false)
-            setSucceeded(true)
-          }
-        }).catch(error => setError(error))
+            console.log(payload)
+            if (payload.error) {
+              console.log(payload.errorerror)
+              setError(`Payment Failed ${payload.error.message}`)
+              setProcessing(false)
+            } else {
+              setError(null)
+              setProcessing(false)
+              setSucceeded(true)
+            }
+          }).catch(error => setError(`${error}  inner confirm error`))
+        })
+      .catch(err => {
+        setError(`Error Processing Your Payment Please Re-Enter Your Card and Try Again.`)
+        setProcessing(false)
       })
-      .catch(err => setError(err))
-
     // const paymentMethodRes = await stripe.createPaymentMethod({
     //   type: "card",
     //   card: cardElement,
@@ -142,9 +142,8 @@ const PaymentForm = ({ amount }) => {
     //       name: paymentDetails.name
     //   },}
     // })
-
-    // console.log(payl
-  }
+    }
+  
 
   const handleChange = async (event) => {
     // Listen for changes in the CardElement

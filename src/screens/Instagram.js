@@ -37,7 +37,7 @@ const Instagram = () => {
         Keep Up With Everything We Do For The Community
       </h1>
       {loading && 
-        <h2 className="instagram__loading">Loading....</h2>
+        <h2 className="instagram__loading"><span> <div className="spinner" id="spinner-ig"></div> </span> </h2>
       }
       <div className="instagram__section--container">
         { posts !== undefined &&
