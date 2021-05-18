@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PaymentForm from '../components/PaymentForm'
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
@@ -12,8 +12,15 @@ const Donate = () => {
   const [paymentOpen, setPaymentOpen] = useState(false)
   const [selectedAmount, setSelectedAmount] = useState(0)
 
-  const options = [10, 25, 50, 75, 100]
+  // const [onDonatePageRender, setOnDonatePageRender] = useState(false)
+
+  // const options = [10, 25, 50, 75, 100]
   
+  // useEffect(() => {
+  //   setOnDonatePageRender(true)
+  // }, [])
+
+
   const donateButton = () => {
     setPaymentOpen(!paymentOpen)
     scrollToTop()

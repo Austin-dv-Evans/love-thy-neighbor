@@ -32,6 +32,7 @@ const FooterNew = () => {
     <>
       <div className={toggle ? "footerNew__formContainer--hidden" : "footerNew__formContainer"}>
         <form action="#" className="footerNew__form" onSubmit={handleSubmit}>
+            <h2>Subscribe to Our Newsletter!</h2>
           <div className="footerNew__formGroup">
             <input
               type="text"

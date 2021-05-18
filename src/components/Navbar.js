@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../assets/whiteLogoRedCross.png'
 // import BlackLogo from "../assets/BlackLogo.png"
 
 
 import { Link } from 'react-router-dom'
+import FabDonate from './FabDonate'
 
 const NavbarMain = () => {
 
@@ -11,15 +12,25 @@ const NavbarMain = () => {
   const openMenu = () => {
     setToggle((toggle) => !toggle)
   }
+  const closeMenu = () => {
+    setToggle(false)
+  }
+
+  let path = window.location.pathname
+
+  // useEffect(() => {
+  //   console.log(window.location.pathname)
+  // }, [path])
 
   return (
     <>
       <nav className="nav">
-        <div className="nav__donateTab">
-          <Link to="/donate">
-            <button className="button__donate menu-donate">Donate Now</button>
-          </Link>
-        </div>
+        {path !== '/donate' &&
+          <FabDonate
+            closeMenu={closeMenu}
+          />
+        }
+          
         <a href="/">
           <img src={logo} alt="ltnLogo" className="nav__navbar--brand" />
         </a>

@@ -46,11 +46,9 @@ function App() {
           </Route>
           <Route path='/donate'>
             <Donate/>
-            
           </Route>
           <Route path='/shop'>
             <Shop />
-            
           </Route>
         </Switch>
         <FooterNew/>

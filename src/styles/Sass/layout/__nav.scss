@@ -8,6 +8,7 @@
   font-family: $Krubfont;
   justify-content: center;
   box-shadow: 0px 3px 10px $color-primary;
+  z-index: 11;
 
     &__navbar{
       height: 16vh;
@@ -85,17 +86,22 @@
 
       @include respond(tab-port){
         display: flex;
+        width: 45vw;
+        height: 102vh;
+        position: fixed;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
         right: 0%;
+        top: 0%;
         background-color: $color-primary;
         z-index: 1;
         padding: 3rem;
         border-radius: 20px;
         z-index: 10;
         font-family: $Krubfont;
+        transition: all .5s;
+        animation: moveInLeft 1s ease-out;
       }
     }
     &__menu--hidden {
