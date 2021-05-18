@@ -29,7 +29,10 @@
       background-color: $color-primary;
       border-radius: 14px;
       font-weight: 400;
-      text-shadow: 1px 1px $color-black ;
       border-width: 3px;
+    }
+    
+    &__button:hover{
+      text-shadow: 1px 1px $color-black;
     }
 }
