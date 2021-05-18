@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import StateSelect from './StateSelect'
+import CountrySelect from './CountrySelect'
 import axios from 'axios'
 import {
   CardElement,
@@ -102,81 +104,104 @@ const PaymentForm = ({ amount }) => {
         return createPayMethod
       })
       .then(({ paymentMethod }) => {
-        console.log('p method', paymentMethod)
-        
         return stripe.confirmCardPayment(secret, {
           receipt_email: paymentDetails.email,
           payment_method: paymentMethod.id
-        }).then( payload  => {
-          console.log(payload)
-          if (error) {
-            console.log(error)
-            setError(`Payment Failed ${error.message}`)
-            setProcessing(false)
-          } else {
-            setError(null)
-            setProcessing(false)
-            setSucceeded(true)
-          }
-          }).catch(error => console.log(error))
+        }).then(payload => {
+            console.log(payload)
+            if (payload.error) {
+              console.log(payload.errorerror)
+              setError(`Payment Failed ${payload.error.message}`)
+              setProcessing(false)
+            } else {
+              setError(null)
+              setProcessing(false)
+              setSucceeded(true)
+            }
+          }).catch(error => setError(`${error}  inner confirm error`))
         })
-        .catch(err => setError(err))
-        
-        // const paymentMethodRes = await stripe.createPaymentMethod({
+      .catch(err => {
+        setError(`Error Processing Your Payment Please Re-Enter Your Card and Try Again.`)
+        setProcessing(false)
+      })
+    // const paymentMethodRes = await stripe.createPaymentMethod({
     //   type: "card",
     //   card: cardElement,
     //   billing_details: {
-      //     name: paymentDetails.name
-      //   },
-      // });
-      
+    //     name: paymentDetails.name
+    //   },
+    // });
+
     // console.log(paymentMethodRes)
     // const payload = await stripe.confirmCardPayment(clientSecret, {
     //   receipt_email: paymentDetails.email,
     //   payment_method: {
-      //     type: "card",
+    //     type: "card",
     //     card: cardElement,
     //     billing_details: {
     //       name: paymentDetails.name
     //   },}
     // })
-    
-    // console.log(payl
-  }
+    }
   
+
+  const handleChange = async (event) => {
+    // Listen for changes in the CardElement
+    // and display any errors as the customer types their card details
+    setDisabled(event.empty);
+    setError(event.error ? event.error.message : "");
+  };
+
   console.log(clientSecret)
   return (
     <div className="payment-form">
-      <form className="payment-form__form" onSubmit={handleSubmit}>
-        <input name="name" value={paymentDetails.name} placeholder="Name" onChange={handleInfoFormChange} />
-        <input name="email" value={paymentDetails.email} placeholder="Email" onChange={handleInfoFormChange} />
-        <input name="line1" value={address.line1} placeholder="Address" onChange={handleAddressFormChange} />
-        <input name="city" value={address.city} placeholder="City" onChange={handleAddressFormChange} />
-        <input name="state" value={address.state} placeholder="State" onChange={handleAddressFormChange} />
-        <input name="country" value={address.country} placeholder="Country" onChange={handleAddressFormChange} />
-        <input name="postal_code" value={address.postal_code} placeholder="Postal Code" onChange={handleAddressFormChange} />
-        <CardElement
-          options={{
-            style: {
-              base: {
-                color: '#424770',
-                '::placeholder': {
-                  color: '#aab7c4',
+      { succeeded ?
+        (<div>
+          <h3>Payment Successful,  Thank You!</h3>
+          <p>You will receive an email reciept.</p>
+        </div>)
+        :
+        <form className="payment-form__form" onSubmit={handleSubmit}>
+          <input name="name" value={paymentDetails.name} placeholder="Name" onChange={handleInfoFormChange} required />
+          <input name="email" value={paymentDetails.email} placeholder="Email" onChange={handleInfoFormChange} required />
+          <input name="line1" value={address.line1} placeholder="Address" onChange={handleAddressFormChange} required />
+          <input name="city" value={address.city} placeholder="City" onChange={handleAddressFormChange} required />
+          {/* <input name="state" value={address.state} placeholder="State" onChange={handleAddressFormChange} required /> */}
+          <StateSelect change={handleAddressFormChange} />
+          {/* <input name="country" value={address.country} placeholder="Country" onChange={handleAddressFormChange} /> */}
+          <CountrySelect change={handleAddressFormChange} />
+          {/* <input name="postal_code" value={address.postal_code} placeholder="Postal Code" onChange={handleAddressFormChange} /> */}
+          <div>
+            <CardElement
+              options={{
+                style: {
+                  base: {
+                    color: '#424770',
+                    iconColor: '#010101',
+                    lineHeight: '35px',
+                    '::placeholder': {
+                      color: '#aab7c4',
+                    },
+                  },
+                  invalid: {
+                    color: '#9e2146',
+                    iconColor: '#9e2146'
+                  },
                 },
-              },
-              invalid: {
-                color: '#9e2146',
-              },
-            },
-          }} />
-        <button
-          className="payment-form__button"
-          disabled={processing || disabled || processing}
-        >
-          <span>{processing ? <span> processing </span> : 'Donate Now'}</span>
-        </button>
-        <h3>{error ? `Error ${error}` : ''}</h3>
-      </form>
+              }}
+              onChange={handleChange}
+            />
+
+          </div>
+          <button
+            className="payment-form__button"
+            disabled={processing || disabled || succeeded}
+          >
+            <span>{processing ? <span> <div className="spinner" id="spinner"></div> </span> : `Donate $${amount}`}</span>
+          </button>
+        </form>
+      }
+      <h3>{error ? `${error}` : ''}</h3>
     </div>
   )
 }
