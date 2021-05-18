@@ -502,7 +502,7 @@ const PaymentForm = ({ amount }) => {
           </div>
           <button
             className="payment-form__button"
-            disabled={processing || disabled || processing}
+            disabled={processing || disabled || succeeded}
           >
             <span>{processing ? <span> <div className="spinner" id="spinner"></div> </span> : `Donate $${amount}`}</span>
           </button>
