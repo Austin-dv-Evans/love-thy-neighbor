@@ -159,7 +159,7 @@ const PaymentForm = ({ amount }) => {
       { succeeded ?
         (<div>
           <h3>Payment Successful,  Thank You!</h3>
-          <p>You will receive and email reciept.</p>
+          <p>You will receive an email reciept.</p>
         </div>)
         :
         <form className="payment-form__form" onSubmit={handleSubmit}>
