@@ -30,20 +30,36 @@
       margin-top: 3rem;
     }
   }
+  &__icon--chev{
+    color: $color-black;
+    font-size: larger;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    z-index: 25;
+    right: 14%;
+    top: 37%;
+    @include respond(tab-port){
+      top: 80%;
+      right: calc(50% - 2rem);
+    }
+  }
   &__subscribeBtn {
     position: absolute;
     left: 8%;
     top: 30%;
+    min-width: 72px;
     color: $color-white;
     background-color: $color-black;
     padding: 2rem 3rem;
+    max-height: 69px;
     font-family: $Krubfont;
     font-size: 2rem;
     border-radius: 20px;
     border: none;
 
     @include respond(tab-port){
-      top: 62%;
+      top: 61.5%;
       left: 2%;
       width: 15rem;
       height: 9rem;
@@ -62,6 +78,8 @@
     background-color: $color-primary;
     padding: 2rem 0rem;
     display: flex;
+    flex-direction: column;
+    font-family: $Krubfont;
     justify-content: center;
     align-items: center;
     border-bottom: 6px solid $color-black;
@@ -69,14 +87,18 @@
     @include respond(tab-port){
       flex-direction: column;
       height: 24rem;
+      margin-top: 2rem;
     }
+
   }
   &__form {
     display: flex;
     align-items: center;
     @include respond(tab-port){
       flex-direction: column;
-      
+    }
+    &--heading {
+      color: $color-white;
     }
   }
   &__formGroup {
@@ -108,3 +130,4 @@
     display: none;
   }
 }
+

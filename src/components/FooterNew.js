@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import footerLogo from '../assets/blackWhiteCross.png'
-import { Facebook, Instagram } from "react-bootstrap-icons"
+import { Facebook, Instagram, ChevronDoubleUp } from "react-bootstrap-icons"
+
 import axios from 'axios'
 
 const FooterNew = () => {
@@ -31,8 +32,8 @@ const FooterNew = () => {
   return (
     <>
       <div className={toggle ? "footerNew__formContainer--hidden" : "footerNew__formContainer"}>
+            <h2 className="footerNew__form--heading">Subscribe to Our Newsletter!</h2>
         <form action="#" className="footerNew__form" onSubmit={handleSubmit}>
-            <h2>Subscribe to Our Newsletter!</h2>
           <div className="footerNew__formGroup">
             <input
               type="text"
@@ -94,6 +95,13 @@ const FooterNew = () => {
         >
           <Instagram className="footerNew__icon--instagram" size={60} />
         </a>
+        <a href="#" className="chevUp">
+          <ChevronDoubleUp 
+            size={30}
+            className="footerNew__icon--chev"
+          />
+        </a>
+        
       </div>
     </>
   )

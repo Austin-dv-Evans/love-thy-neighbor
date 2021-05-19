@@ -18,9 +18,9 @@
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1.5rem;
     padding: 3.5rem 8rem;
-    @include respond (phone) {
-      padding: 0;
-      grid-template-rows: repeat(7, 1fr);
+    @include respond (tab-port) {
+      padding: 3rem 0rem 10rem 0rem;
+      grid-template-rows: repeat(7, .6fr);
     }
   }
   &__heading {
@@ -40,8 +40,8 @@
   }
   &__logo {
     width: 30rem;
-    @include respond (phone) {
-      width: 22rem;
+    @include respond (tab-port) {
+      width: 25rem;
     }
   }
 }
